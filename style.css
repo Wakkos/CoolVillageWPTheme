@@ -845,13 +845,14 @@ sub {
       text-align: center;
       z-index: 100;
       border-radius: 0; } }
-  .nav--top__list li {
-    background-color: #ff944d; }
-    @media (min-width: 48em) {
-      .nav--top__list li {
-        display: inline-block;
-        background-color: transparent;
-        margin-right: 24px; } }
+
+.nav--top__item {
+  background-color: #ff944d; }
+  @media (min-width: 48em) {
+    .nav--top__item {
+      display: inline-block;
+      background-color: transparent;
+      margin-right: 24px; } }
 
 /*
  * Ya que no le doy soporte a IE9 vamos a hacer el toggle con CSS3 y el hack
@@ -874,7 +875,7 @@ sub {
   top: 0;
   left: 0;
   z-index: 100;
-  width: 44px;
+  width: 100%;
   height: 52.8px;
   color: white;
   overflow: hidden;
@@ -1240,7 +1241,8 @@ body {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5em;
-  color: #262626; }
+  color: #262626;
+  border-top: 56px solid #481019; }
 
 /**
 * A partir de aquí es donde debes escribir los estilos de posicionamiento

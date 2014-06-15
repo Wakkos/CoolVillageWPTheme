@@ -69,9 +69,11 @@
 			z-index: 100;
             border-radius: 0;
 		}
-		// Stupid Wordpress won't let me add a custom class to all <li> elements
+	}
 
-		li {
+			// Stupid Wordpress won't let me add a custom class to all <li> elements
+
+		.nav--top__item {
 			background-color: $nav-lists-background;
             @include media-query-bp($bp3) {
                 display: inline-block;
@@ -79,7 +81,6 @@
                 margin-right: $gutterwidth;
             }
 		}
-	}
 	/*
 	 * Ya que no le doy soporte a IE9 vamos a hacer el toggle con CSS3 y el hack
 	 * del checkbox : http://codepen.io/Wakkos/pen/xAhdq
@@ -111,7 +112,7 @@
 		top:0;
 		left:0;
 	    z-index: 100;
-	    width:  $nav-width;
+	    width:  100%;
 	    height: $nav-height;
 	    color: $nav-color;
 	    overflow: hidden;

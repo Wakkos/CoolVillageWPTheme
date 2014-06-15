@@ -143,4 +143,14 @@ wp_deregister_style('jetpack-widgets'); // Widgets
 add_action('wp_print_styles', 'remove_jetpack_styles');
 
 
+// Esta función me permite darle a todos los LI de la navegación una misma clase.
+// http://www.miguelmanchego.com/2010/wordpress-3-menus/
+function custom_nav_class($classes, $item){
+$classes[] = "nav--top__item";
+return $classes;
+}
+add_filter('nav_menu_css_class' , 'custom_nav_class' , 10 , 2);
+
+
+
 ?>
