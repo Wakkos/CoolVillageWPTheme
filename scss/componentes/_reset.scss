@@ -30,3 +30,9 @@ html,body,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,ad
             @include vendor(box-sizing, border-box);
         }
     }
+
+    // Nunca uso esas viñetas horribles, así que...
+
+    li {
+      list-style-type: none;
+    }

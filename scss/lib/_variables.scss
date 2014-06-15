@@ -119,7 +119,7 @@ $basefontsize :      16;
  */
 $basecolor      : rgb(255,148,77); // Naranja
 $basecolor-light: lighten($basecolor, 5%);
-$secondary      : rgb(219,216,121); // Rojo CoolVillage
+$secondary      : #481019; // Rojo CoolVillage
 $bordercolor    : lighten($secondary, 50); // Verde Bordes
 $compcolor      : rgb(216,240,227); //
 
@@ -254,7 +254,15 @@ $inputfocus         : $basecolor, 40%;
 $placeholdercolor   : $lightergrey;
 
 
-// Navegación
-$navitembordercolor    : $bordercolor;
-$navitempadding        : $gutterwidth / 2;
-$navtabsbordercolor    : $bordercolor;
+
+/**
+ * Very simple, pared-back, mobile-first, responsive nav.
+ */
+$nav-width:               44px;
+$nav-height:              $nav-width * 1.2;
+$nav-icon-size:           16px;
+$nav-color:               #fff;
+$nav-background:          $secondary;
+$nav-borders:             lighten($nav-background, 10%);
+$nav-lists-background:    $basecolor;
+

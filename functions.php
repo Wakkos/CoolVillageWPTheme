@@ -6,8 +6,7 @@ function register_my_menus() {
 	register_nav_menus(
 		array(
 			'main-nav-menu' => __( 'Menu Superior' ),
-            'footer' => __( 'Menu del footer' ),
-			'mobile' => __( 'Menu Para Móviles (4 items solo)' )
+      'footer' => __( 'Menu del footer' )
 		)
 	);
 }

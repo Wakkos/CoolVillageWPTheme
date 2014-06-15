@@ -44,4 +44,10 @@
 <meta name="msapplication-TileColor" content="#000">
 <meta http-equiv="cleartype" content="on">
 
- <?php include( TEMPLATEPATH . 'templates/role__banner.php' ); ?>
+</head>
+<body>
+
+ <!-- La navegación interna, superior. -->
+ <?php include( TEMPLATEPATH . '/templates/role__navigation--top.php' ); ?>
+
+ <?php include( TEMPLATEPATH . '/templates/role__banner.php' ); ?>

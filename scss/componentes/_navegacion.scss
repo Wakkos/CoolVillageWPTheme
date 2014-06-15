@@ -7,86 +7,120 @@
     $NAVEGACIÓN
 \*------------------------------------*/
 /**
-*
-* Le asignamos la clase .nav al ul que contenga la navegación:
-
-		 <ul class="nav">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="about.html">About us</a></li>
-			<li><a href="products.html">Products</a></li>
-			<li><a href="services.html">Services</a></li>
-			<li><a href="contact.html">Contact us</a></li>
-		</ul>
-*
 */
-.nav {
-  	//&:extend(.clearfix all);      /// TODO : Pasar a sass
-  	> li {
-    position: relative;
-    display: inline-block;
 
-	    > a {
-	      position: relative;
-	      padding: $navitempadding;
-	      &:hover,
-	      &:focus {
-	        text-decoration: none;
-	        background-color: $bordercolor;
-	      }
-	    }
-	}
-}
+.nav--top {
+	position: absolute;
+	top:0;
+	left:0;
+    z-index: 10;
+    width:  $nav-width;
+    height: $nav-height;
+    color: $nav-color;
+    background-color: green;
+    overflow: hidden;
+    cursor: pointer;
 
-
-/**
-*
-* .nav--fit extiende a .nav y alarga la navegación
-* para que ocupe el 100% de su contenedor
-
-		 <ul class="nav nav--fit">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="about.html">About us</a></li>
-			<li><a href="products.html">Products</a></li>
-			<li><a href="services.html">Services</a></li>
-			<li><a href="contact.html">Contact us</a></li>
-		</ul>
-*
-*/
-.nav--fit{
-    display:table;
-    width:100%;
-
-    > li{
-        display:table-cell;
-
-        > a{
-            display:block;
+    &:after {
+        content: "☰";
+        font-size: $nav-icon-size;
+        width: 1em;
+        line-height: 1;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top:  -($nav-icon-size / 2);
+        margin-left: -($nav-icon-size / 2);
+        @include media-query-bp($bp3) {
+			content: normal;
+            content: none;
         }
+    }
+    a, a:visited {
+    	color: $nav-color;
+        display: block;
+        padding-left:  ($nav-width - $nav-icon-size) / 2;
+        line-height: $nav-width;
+        background-image: none;
+        line-height: 2
     }
 }
 
-
-
-/**
-*
-* .nav--tabs extiende a .nav y crea la base para una navegación
-* en pestañas.
-
-		 <ul class="nav nav--tabs">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="about.html">About us</a></li>
-			<li><a href="products.html">Products</a></li>
-			<li><a href="services.html">Services</a></li>
-			<li><a href="contact.html">Contact us</a></li>
-		</ul>
-*
-*/
-.nav--tabs {
-	border-bottom: 1px solid $navtabsbordercolor;
-	> li {
-	    margin-bottom: -1px;
-		> a {
+	.nav--top__list {
+		list-style: none;
+        margin:  0;
+        padding: 0;
+        padding-top: $nav-height;
+        position: absolute;
+        top:   0;
+        left:  0;
+        background-color: $nav-background;
+        width: 300px;
+        border-radius: $radius;
+        z-index: -1;
+		@include media-query-bp($bp3) {
+			padding: 0 0 0 ($gutterwidth * 2);
+			position: static;
+			width: auto;
 			display: block;
+			background: none;
+			text-align: center;
+			z-index: 100;
+            border-radius: 0;
+		}
+		// Stupid Wordpress won't let me add a custom class to all <li> elements
+
+		li {
+			background-color: $nav-lists-background;
+            @include media-query-bp($bp3) {
+                display: inline-block;
+                background-color: transparent;
+                margin-right: $gutterwidth;
+            }
 		}
 	}
-}
+	/*
+	 * Ya que no le doy soporte a IE9 vamos a hacer el toggle con CSS3 y el hack
+	 * del checkbox : http://codepen.io/Wakkos/pen/xAhdq
+	 */
+	
+	// Ocultamos el checkbox
+	 .checkbox__hack {
+	 	display: none;
+		
+		/*
+	 	 * Quitamos el overflow:hidden para que se muestre el menú
+	 	 * Eso es todo, un overflow. Con eso mostramos u ocultamos el menú.
+	 	 * (Eso y el content del after para que sea una X y no la hamburguesa)
+	 	 */
+
+		&:checked {
+	 	 	~ .nav--top {
+	 	 		overflow: visible;
+	 	 		&::after {
+	 	 			content:"x";
+	 	 		}
+	 	 	}
+		}
+	 }
+
+	 // Estilizamos el label para que aparezca JUSTO encima de la navegación
+	 .checkbox-hack__label {
+	 	position: absolute;
+		top:0;
+		left:0;
+	    z-index: 100;
+	    width:  $nav-width;
+	    height: $nav-height;
+	    color: $nav-color;
+	    overflow: hidden;
+	    cursor: pointer;
+	    margin:0;
+	    z-index: 100;
+	 }
+
+
+
+
+
