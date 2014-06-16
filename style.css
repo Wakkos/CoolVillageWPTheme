@@ -790,14 +790,13 @@ sub {
 /**
 */
 .nav--top {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
   width: 44px;
   height: 52.8px;
   color: white;
-  background-color: green;
   overflow: hidden;
   cursor: pointer; }
   .nav--top:after {
@@ -810,7 +809,8 @@ sub {
     top: 50%;
     left: 50%;
     margin-top: -8px;
-    margin-left: -8px; }
+    margin-left: -8px;
+    color: white; }
     @media (min-width: 48em) {
       .nav--top:after {
         content: normal;
@@ -821,7 +821,23 @@ sub {
     padding-left: 14px;
     line-height: 44px;
     background-image: none;
-    line-height: 2; }
+    line-height: 3;
+    text-transform: uppercase;
+    background-color: white;
+    font-size: 14px;
+    font-size: 0.875rem;
+    border-bottom: 1px solid #27090d;
+    border-top: 1px solid #5d1520;
+    background-color: #481019;
+    text-shadow: 1px 1px 1px #5d1520;
+    -webkit-transition: background 0.3s ease;
+    -moz-transition: background 0.3s ease;
+    -ms-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
+    transition: background 0.3s ease; }
+    .nav--top a:hover, .nav--top a:visited:hover {
+      text-decoration: none;
+      background-color: #1e070b; }
 
 .nav--top__list {
   list-style: none;
@@ -832,9 +848,15 @@ sub {
   top: 0;
   left: 0;
   background-color: #481019;
-  width: 300px;
-  border-radius: 2px;
-  z-index: -1; }
+  -webkit-box-shadow: inset -100px -50px 100px 100px rgba(0, 0, 0, 0.2);
+  box-shadow: inset -100px -50px 100px 100px rgba(0, 0, 0, 0.2);
+  		/* 
+           * Usamos VW porque con % tomaría el tamaño del contenedor, 
+           * que es $nav-width (unos 48px) y no se ve na' e ná
+           */
+  width: 99vw;
+  z-index: -1;
+  height: 100vh; }
   @media (min-width: 48em) {
     .nav--top__list {
       padding: 0 0 0 48px;
@@ -847,7 +869,30 @@ sub {
       border-radius: 0; } }
 
 .nav--top__item {
-  background-color: #ff944d; }
+  background-color: #ff944d;
+  			/* 
+  			 * Con estos dos nth-of-type seleccionamos los últimos dos DIV del menú 
+  			 * y los bajamos como si fueran un "menú inferior", PERO NO! son el mismo menú!
+   			*/ }
+  .nav--top__item:nth-last-of-type(1) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    text-align: center;
+    border-left: 1px solid #27090d; }
+    .nav--top__item:nth-last-of-type(1) a {
+      padding: 0;
+      background-color: #ff944d; }
+  .nav--top__item:nth-last-of-type(2) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    text-align: center;
+    border-right: 1px solid #5d1520; }
+    .nav--top__item:nth-last-of-type(2) a {
+      padding: 0; }
   @media (min-width: 48em) {
     .nav--top__item {
       display: inline-block;
@@ -1241,13 +1286,18 @@ body {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5em;
-  color: #262626;
-  border-top: 56px solid #481019; }
+  color: #262626; }
 
 /**
 * A partir de aquí es donde debes escribir los estilos de posicionamiento
 * y detalles que forman tu web. Disfruta!
 */
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+.mainheader {
+  text-align: center; }
+
 /*------------------------------------*\
     $TEXTURAS
 \*------------------------------------*/

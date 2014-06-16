@@ -10,14 +10,13 @@
 */
 
 .nav--top {
-	position: absolute;
+	position: fixed;
 	top:0;
 	left:0;
     z-index: 10;
     width:  $nav-width;
     height: $nav-height;
     color: $nav-color;
-    background-color: green;
     overflow: hidden;
     cursor: pointer;
 
@@ -32,6 +31,7 @@
         left: 50%;
         margin-top:  -($nav-icon-size / 2);
         margin-left: -($nav-icon-size / 2);
+        color: $white;
         @include media-query-bp($bp3) {
 			content: normal;
             content: none;
@@ -43,7 +43,20 @@
         padding-left:  ($nav-width - $nav-icon-size) / 2;
         line-height: $nav-width;
         background-image: none;
-        line-height: 2
+        line-height: 3;
+        text-transform: uppercase;
+        background-color: $white;
+        @include font-size(14);
+        border-bottom: 1px solid darken($secondary, 8);
+        border-top: 1px solid lighten($secondary, 5);
+        background-color: $secondary;
+        text-shadow: 1px 1px 1px lighten($secondary, 5);
+        @include transition(background $hovertransition ease);
+
+        &:hover {
+        	text-decoration: none;
+        	background-color: darken($secondary, 10);
+        }
     }
 }
 
@@ -56,9 +69,14 @@
         top:   0;
         left:  0;
         background-color: $nav-background;
-        width: 300px;
-        border-radius: $radius;
+        @include box-shadow(inset -100px -50px 100px 100px rgba(0,0,0,0.2));
+		/* 
+         * Usamos VW porque con % tomaría el tamaño del contenedor, 
+         * que es $nav-width (unos 48px) y no se ve na' e ná
+         */
+        width: 99vw;
         z-index: -1;
+        height: 100vh;
 		@include media-query-bp($bp3) {
 			padding: 0 0 0 ($gutterwidth * 2);
 			position: static;
@@ -75,6 +93,33 @@
 
 		.nav--top__item {
 			background-color: $nav-lists-background;
+			/* 
+			 * Con estos dos nth-of-type seleccionamos los últimos dos DIV del menú 
+			 * y los bajamos como si fueran un "menú inferior", PERO NO! son el mismo menú!
+ 			*/			
+ 			&:nth-last-of-type(1) {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: 50%;
+				text-align: center;
+				border-left: 1px solid darken($secondary, 8);
+				a {
+					padding:0;
+					background-color: $basecolor;
+				}
+			}
+			&:nth-last-of-type(2) {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 50%;
+				text-align: center;
+				border-right: 1px solid lighten($secondary, 5);
+				a {
+					padding:0;
+				}
+			}
             @include media-query-bp($bp3) {
                 display: inline-block;
                 background-color: transparent;
