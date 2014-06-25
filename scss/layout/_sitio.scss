@@ -46,10 +46,10 @@ body {
 	@include font-size();
 	line-height : $baselineheight;
 	color : $textcolor;
+	border-top:5px solid $secondary;
 }
 
 /**
 * A partir de aquí es donde debes escribir los estilos de posicionamiento
 * y detalles que forman tu web. Disfruta!
 */
-

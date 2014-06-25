@@ -377,3 +377,14 @@
             #{$property}:$value;
 }
 
+@mixin underline($color : $lightgrey, $thikness : 2px, $position : 93%) {
+	text-decoration : none;
+	color : $linkcolor;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to($color));
+	background-image: -webkit-linear-gradient(top, transparent 50%, $color 50%);
+	background-image: linear-gradient(to bottom, transparent 50%, $color 50%);
+	background-repeat: repeat-x;
+	-webkit-background-size: $thikness $thikness;
+	background-size: $thikness $thikness;
+	background-position: 0 $position;
+}

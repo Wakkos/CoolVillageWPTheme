@@ -6,7 +6,7 @@ function register_my_menus() {
 	register_nav_menus(
 		array(
 			'main-nav-menu' => __( 'Menu Superior' ),
-      'footer' => __( 'Menu del footer' )
+      'secondary-nav-blog' => __( 'Menu del Blog' )
 		)
 	);
 }
@@ -58,10 +58,8 @@ function my_register_sidebars() {
       'id' => 'Stimpy',
       'name' => __( 'Stimpy' ),
       'description' => __( 'Dentro del globo de Stimpy.' ),
-      'before_widget' => '<div id="twitter_update_list"><h4 class="widget-title">',
-      'after_widget' => '</h4></div>',
-      'before_title' => '',
-      'after_title' => ''
+      'before_title' => '<h3>',
+      'after_title' => '</h3>'
     )
   );
 
@@ -141,16 +139,6 @@ wp_deregister_style('stats_reports_css'); // Stats
 wp_deregister_style('jetpack-widgets'); // Widgets
 }
 add_action('wp_print_styles', 'remove_jetpack_styles');
-
-
-// Esta función me permite darle a todos los LI de la navegación una misma clase.
-// http://www.miguelmanchego.com/2010/wordpress-3-menus/
-function custom_nav_class($classes, $item){
-$classes[] = "nav--top__item";
-return $classes;
-}
-add_filter('nav_menu_css_class' , 'custom_nav_class' , 10 , 2);
-
 
 
 ?>

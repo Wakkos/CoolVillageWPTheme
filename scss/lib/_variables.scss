@@ -45,7 +45,7 @@ $no-mq-classname: ".ie8-sucks";
 /**
  * Con agregar esta variable a las imágenes declaradas en CSS apañamos:
  */
-$image-dir: "../img";
+$image-dir: "img";
 
  //Use: background-image:url("#{$image-dir}/btn.jpg");
 
@@ -63,7 +63,7 @@ $baselineheight :     1.5em;
 $baseline :           $baselineheight;
 $gutterwidth :        24px;
 $pagemaxwitdh :       80%;
-$radius :             2px;
+$radius :             4px;
 $hovertransition :    .3s;
 $animationtime :      .8s;
 
@@ -84,7 +84,7 @@ $animationtime :      .8s;
 $basefont : "Helvetica Neue", Helvetica, Arial, sans-serif;
 $altfont : Georgia, Times, "Times New Roman";
 $codefont : "Courier New", monospace;
-$baseheadingfont : inherit;
+$baseheadingfont : 'Alegreya', serif;
 
 $baseheadingfontweight : bold;
 $baseheadingfontcolor : inherit;
@@ -119,6 +119,7 @@ $basefontsize :      16;
  */
 $basecolor      : rgb(255,148,77); // Naranja
 $basecolor-light: lighten($basecolor, 5%);
+$blue           : #a1e2f3;
 $secondary      : #481019; // Rojo CoolVillage
 $bordercolor    : lighten($secondary, 50); // Verde Bordes
 $compcolor      : rgb(216,240,227); //
@@ -137,19 +138,19 @@ $lightergrey 	: lighten($black, 90%);
 $white 			: rgb(255,255,255);
 
 // Web
-$background: 		$white;
-$textcolor: 		$darkergrey;
-$textcolor-strong:	$black;
+$background      : rgb(248,245,239);
+$textcolor       : $darkergrey;
+$textcolor-strong:$black;
 
 // Links  //////////////////////
-$linkcolor 		    : $basecolor;
+$linkcolor 		    : $secondary;
 $linkcolorhover 	: darken($linkcolor, 10);
 $linkcolorvisited   : $basecolor;
 $linkcolorfocus 	: darken($linkcolorvisited, 10);
 
+// Borde Inferior /////////////////
 
-
-
+$border--bottom     : 5px solid darken($basecolor, 10);
 
 
 /*------------------------------------*\
@@ -221,10 +222,10 @@ $badgebackground    : $basecolor;
 $badgecolor         : $textcolor;
 
 // botones
-$buttonbackground   : $basecolor-light;
+$buttonbackground   : $secondary;
 $buttonbordercolor  : darken($buttonbackground, 10%);
 $buttonbottombordercolor : darken($buttonbordercolor, 10%);
-$buttoncolor        : $black;
+$buttoncolor        : $basecolor;
 $buttonborderwidth  : 1px;
 $buttonborderstyle  : solid;
 

@@ -4,4 +4,6 @@
 
 .mainheader {
 	text-align: center;
+	@include max-width(40%);
+	margin-bottom: $baseline;
 }

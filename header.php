@@ -39,8 +39,26 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Windows 8 / RT -->
-<meta name="msapplication-TileImage" content="img/apple-touch-icon-144x144-precomposed.png">
+<!-- Iconos -->
+
+<!-- 16x16 -->
+<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="<?php bloginfo('template_url'); ?>/img/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo('template_url'); ?>/img/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo('template_url'); ?>/img/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php bloginfo('template_url'); ?>/img/apple-touch-icon-144x144-precomposed.png">
+
+<!--iOS -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Windows 8 / RT http://bit.ly/HHkt7m -->
+<meta name="msapplication-TileImage" content="<?php bloginfo('template_url'); ?>/img/apple-touch-icon-144x144-precomposed.png">
 <meta name="msapplication-TileColor" content="#000">
 <meta http-equiv="cleartype" content="on">
 
@@ -48,6 +66,10 @@
 <body>
 
  <!-- La navegación interna, superior. -->
- <?php include( TEMPLATEPATH . '/templates/role__navigation--top.php' ); ?>
+<?php include( TEMPLATEPATH . '/templates/role__navigation--top.php' ); ?>
 
- <?php include( TEMPLATEPATH . '/templates/role__banner.php' ); ?>
+<!-- El Encabezado (Logo) -->
+<?php include( TEMPLATEPATH . '/templates/role__banner.php' ); ?>
+
+<!-- La navegación del blog -->
+<?php include( TEMPLATEPATH . '/templates/role__navigation--blog.php' ); ?>

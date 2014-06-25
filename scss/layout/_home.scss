@@ -1,0 +1,51 @@
+
+
+
+
+
+/*------------------------------------*\
+    $HOME
+\*------------------------------------*/
+
+.main--home {
+	margin-bottom: $gutterwidth;
+}
+	.main--home__container {
+		margin-bottom: $baseline;
+	}
+
+		.main--home__item {
+			border-top: 1px solid $lightgrey;
+			position: relative;
+			padding:$baseline 0 0 $gutterwidth;
+			margin-left: ($gutterwidth / 2);
+			
+			&::before {
+				content:"";
+				position: absolute;
+				top: $baseline - .2;
+				left:0;
+				font-family: 'icomoon';
+				speak: none;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				@include font-size(20);
+				color: $secondary;
+
+				/* Better Font Rendering =========== */
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+
+			&:last-child {
+				margin-bottom: $gutterwidth;
+			}
+		}
+
+			/* Los Iconos del article */
+			.blog::before {
+				content: "\f086";
+			}

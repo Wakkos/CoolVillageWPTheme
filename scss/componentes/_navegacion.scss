@@ -10,9 +10,9 @@
 */
 
 .nav--top {
-	position: fixed;
+	position: absolute;
 	top:0;
-	left:0;
+	left:$gutterwidth / 2;
     z-index: 10;
     width:  $nav-width;
     height: $nav-height;
@@ -22,13 +22,13 @@
 
     &:after {
         content: "☰";
-        font-size: $nav-icon-size;
+        @include font-size(16);
         width: 1em;
         line-height: 1;
-        text-align: center;
+        text-align: left;
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: $gutterwidth;
         margin-top:  -($nav-icon-size / 2);
         margin-left: -($nav-icon-size / 2);
         color: $white;
@@ -87,11 +87,10 @@
 			z-index: 100;
             border-radius: 0;
 		}
-	}
 
-			// Stupid Wordpress won't let me add a custom class to all <li> elements
+		// Stupid Wordpress won't let me add a custom class to all <li> elements
 
-		.nav--top__item {
+		li {
 			background-color: $nav-lists-background;
 			/* 
 			 * Con estos dos nth-of-type seleccionamos los últimos dos DIV del menú 
@@ -126,6 +125,9 @@
                 margin-right: $gutterwidth;
             }
 		}
+	}
+
+			
 	/*
 	 * Ya que no le doy soporte a IE9 vamos a hacer el toggle con CSS3 y el hack
 	 * del checkbox : http://codepen.io/Wakkos/pen/xAhdq
@@ -168,5 +170,59 @@
 
 
 
+/* 
+ * Ahora damos estilos al menú que nos permite navegar por las categorías del blog
+ */
 
+.nav--blog__list {
+	margin:0;
+	padding:0;
+	width: 100%;
+	display: table;
+	table-layout: fixed; /* optional */
+	margin-bottom: $baseline;
+	li {
+		display: table-cell;
+		width: auto;
+		padding:0 1px;
+		&.current-menu-item {
+			a, a:visited {
+				background-color: darken($basecolor, 10);
+				background-image:none;
+			}
+		}
+	}
 
+	a, a:visited {
+		display: block;
+		line-height: 3;
+		background-color: $basecolor;
+		text-align: center;
+		@include font-size(14);
+		border-bottom: $border--bottom;
+		color:$white;
+		text-transform: uppercase;
+		background-image:none;
+		&:hover {
+			background-color: darken($basecolor, 10);
+			text-decoration: none;
+		}
+	}
+}
+/* 
+ * Por vagancia meto aquí mismo la navegación de las entradas.
+ * Al ser pocas lineas, who cares?
+ */
+ .posts-nav {
+ 	@include max-width(80%);
+ 	@extend %clearfix;
+ 	border-top: 1px solid $lightgrey;
+ 	padding-top: $baseline / 2;
+ }
+ 	.previous {
+ 		float: right;
+ 	}
+
+ 	.next {
+ 		float: left;
+ 	}

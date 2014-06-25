@@ -156,6 +156,11 @@
 * Clear floats.
 * http://bit.ly/1e3YaBH
 */
+.posts-nav:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 /**
 * Gradientes los ocnvertimos en placeholders porque imprime 10 millones de
 * líneas inútiles en el CSS
@@ -195,29 +200,11 @@ li {
  */
 @font-face {
   font-family: 'icomoon';
-  src: url("fonts/icomoon.eot");
-  src: url("fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("fonts/icomoon.woff") format("woff"), url("fonts/icomoon.ttf") format("truetype"), url("fonts/icomoon.svg#icomoon") format("svg");
+  src: url("fonts/icomoon.eot?6vdqpe");
+  src: url("fonts/icomoon.eot?#iefix6vdqpe") format("embedded-opentype"), url("fonts/icomoon.woff?6vdqpe") format("woff"), url("fonts/icomoon.ttf?6vdqpe") format("truetype"), url("fonts/icomoon.svg?6vdqpe#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before {
-  font-family: 'icomoon';
-  content: attr(data-icon);
-  speak: none;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-/* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
-you can use the generic selector below, but it's slower:
-[class*="icon-"] {
-*/
-.icon-cloud-download, .icon-cloud-upload, .icon-user, .icon-css3, .icon-eye {
+[class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -225,34 +212,30 @@ you can use the generic selector below, but it's slower:
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  -webkit-font-smoothing: antialiased; }
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
-.icon-cloud-download:before {
-  content: "\e009"; }
+.icon-comments:before {
+  content: "\f086"; }
 
-.icon-cloud-upload:before {
-  content: "\e000"; }
+.icon-play:before {
+  content: "\e601"; }
 
-.icon-user:before {
-  content: "\e001"; }
-
-.icon-css3:before {
-  content: "\f13c"; }
-
-.icon-eye:before {
-  content: "\e002"; }
+.icon-link:before {
+  content: "\e602"; }
 
 /*------------------------------------*\
     $LINKS
 \*------------------------------------*/
 a {
   text-decoration: none;
-  color: #ff944d; }
+  color: #481019; }
   a:visited {
     color: #ff944d; }
   a:hover {
-    text-decoration: underline;
-    color: #ff751a; }
+    text-decoration: none;
+    color: #1e070b; }
   a:focus {
     outline: thin dotted;
     color: #ff751a; }
@@ -336,28 +319,30 @@ table {
   color: #262626;
   text-align: center;
   vertical-align: middle;
-  font-size: 100%;
+  font-size: 12px;
+  font-size: 0.75rem;
   white-space: nowrap;
-  background-color: #ffa366;
+  background-color: #481019;
   border: none;
-  font-weight: bold;
   cursor: pointer;
   margin: 0;
   padding-top: 0;
   padding-bottom: 0;
   padding-right: 1em;
   padding-left: 1em;
-  border-radius: 2px;
+  border-radius: 4px;
   	/**
    	* Nadie quiere un botón con texto subrayado cuando
    	* hacemos hover.
    	*/ }
+  .btn a, .btn a:visited {
+    color: #ff944d; }
   .btn:hover {
     text-decoration: none; }
   .btn:active, .btn:focus {
     outline: none; }
   .btn:visited {
-    color: #262626; }
+    color: #ff944d; }
 
 /*------------------------------------*\
     $BOTONES-VARIANTES
@@ -370,7 +355,7 @@ table {
 * Inputs con estilo de botones
 */
 input[type="submit"].btn:hover {
-  border-color: #ff8533; }
+  border-color: #1e070b; }
 
 /**
 * Botón no disponible
@@ -489,31 +474,31 @@ input[type="submit"].btn:hover {
   margin-left: 0;
   -webkit-border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 0;
-  -webkit-border-bottom-left-radius: 2px;
-  -webkit-border-top-left-radius: 2px;
+  -webkit-border-bottom-left-radius: 4px;
+  -webkit-border-top-left-radius: 4px;
   -moz-border-radius-topright: 0;
   -moz-border-radius-bottomright: 0;
-  -moz-border-radius-bottomleft: 2px;
-  -moz-border-radius-topleft: 2px;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-topleft: 4px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  border-bottom-left-radius: 2px;
-  border-top-left-radius: 2px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box; }
 
 .btn--group .btn:last-child {
-  -webkit-border-top-right-radius: 2px;
-  -webkit-border-bottom-right-radius: 2px;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
   -webkit-border-bottom-left-radius: 0;
   -webkit-border-top-left-radius: 0;
-  -moz-border-radius-topright: 2px;
-  -moz-border-radius-bottomright: 2px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
   -moz-border-radius-bottomleft: 0;
   -moz-border-radius-topleft: 0;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
   -webkit-background-clip: padding-box;
@@ -522,17 +507,17 @@ input[type="submit"].btn:hover {
 
 .btn--group .btn.large:first-child {
   margin-left: 0;
-  -webkit-border-top-right-radius: 2px;
+  -webkit-border-top-right-radius: 4px;
   -webkit-border-bottom-right-radius: 0;
-  -webkit-border-bottom-left-radius: 2px;
+  -webkit-border-bottom-left-radius: 4px;
   -webkit-border-top-left-radius: 0;
-  -moz-border-radius-topright: 2px;
+  -moz-border-radius-topright: 4px;
   -moz-border-radius-bottomright: 0;
-  -moz-border-radius-bottomleft: 2px;
+  -moz-border-radius-bottomleft: 4px;
   -moz-border-radius-topleft: 0;
-  border-top-right-radius: 2px;
+  border-top-right-radius: 4px;
   border-bottom-right-radius: 0;
-  border-bottom-left-radius: 2px;
+  border-bottom-left-radius: 4px;
   border-top-left-radius: 0;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
@@ -540,17 +525,17 @@ input[type="submit"].btn:hover {
 
 .btn--group .btn.large:last-child {
   -webkit-border-top-right-radius: 0;
-  -webkit-border-bottom-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 4px;
   -webkit-border-bottom-left-radius: 0;
-  -webkit-border-top-left-radius: 2px;
+  -webkit-border-top-left-radius: 4px;
   -moz-border-radius-topright: 0;
-  -moz-border-radius-bottomright: 2px;
+  -moz-border-radius-bottomright: 4px;
   -moz-border-radius-bottomleft: 0;
-  -moz-border-radius-topleft: 2px;
+  -moz-border-radius-topleft: 4px;
   border-top-right-radius: 0;
-  border-bottom-right-radius: 2px;
+  border-bottom-right-radius: 4px;
   border-bottom-left-radius: 0;
-  border-top-left-radius: 2px;
+  border-top-left-radius: 4px;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box; }
@@ -577,7 +562,7 @@ img {
   -ms-interpolation-mode: bicubic; }
 
 .img--rounded {
-  border-radius: 8px; }
+  border-radius: 16px; }
 
 .img--polaroid {
   padding: 12px;
@@ -613,25 +598,31 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: inherit;
+  font-family: "Alegreya", serif;
   font-weight: bold;
   color: inherit;
   text-rendering: optimizelegibility; }
-  h1.altheader,
-  h2.altheader,
-  h3.altheader,
-  h4.altheader,
-  h5.altheader,
-  h6.altheader {
-    color: gray;
-    text-transform: uppercase; }
+  h1 a, h1 a:visited,
+  h2 a,
+  h2 a:visited,
+  h3 a,
+  h3 a:visited,
+  h4 a,
+  h4 a:visited,
+  h5 a,
+  h5 a:visited,
+  h6 a,
+  h6 a:visited {
+    color: #481019;
+    line-height: 1; }
 
 h1 small,
 h2 small,
 h3 small {
   font-weight: normal;
   display: block;
-  color: gray; }
+  color: gray;
+  line-height: 1; }
 
 h1, .h1 {
   margin-bottom: 0.75em;
@@ -640,7 +631,7 @@ h1, .h1 {
   line-height: 1.2; }
 
 h2, .h2 {
-  margin-bottom: 0.5em;
+  margin-bottom: Infinityem;
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1.2; }
@@ -676,23 +667,42 @@ dl,
 address {
   margin-bottom: 1.5em;
   line-height: 1.5em; }
+  p a, p a:visited,
+  ol a,
+  ol a:visited,
+  ul a,
+  ul a:visited,
+  dl a,
+  dl a:visited,
+  address a,
+  address a:visited {
+    text-decoration: none;
+    color: #481019;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#bfbfbf));
+    background-image: -webkit-linear-gradient(top, transparent 50%, #bfbfbf 50%);
+    background-image: linear-gradient(to bottom, transparent 50%, #bfbfbf 50%);
+    background-repeat: repeat-x;
+    -webkit-background-size: 2px 2px;
+    background-size: 2px 2px;
+    background-position: 0 93%; }
 
 .intro {
   font-weight: bold; }
 
+.home-intro {
+  font-weight: normal;
+  font-size: 14px;
+  font-size: 0.875rem;
+  border-bottom: 5px solid #ff751a;
+  padding: 12px 0.75em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+  background-color: white; }
+
 small {
   font-size: 12px;
   font-size: 0.75rem;
-  color: gray; }
-
-ul,
-ol {
-  margin: 0 0 1.5em 0;
-  padding: 0 0 0 24px; }
-
-li ul,
-li ol {
-  margin: 0; }
+  color: black; }
 
 blockquote {
   margin: 0 0 1.5em 0;
@@ -787,9 +797,9 @@ sub {
 /**
 */
 .nav--top {
-  position: fixed;
+  position: absolute;
   top: 0;
-  left: 0;
+  left: 12px;
   z-index: 10;
   width: 44px;
   height: 52.8px;
@@ -799,12 +809,13 @@ sub {
   .nav--top:after {
     content: "☰";
     font-size: 16px;
+    font-size: 1rem;
     width: 1em;
     line-height: 1;
-    text-align: center;
+    text-align: left;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 24px;
     margin-top: -8px;
     margin-left: -8px;
     color: white; }
@@ -862,36 +873,35 @@ sub {
     text-align: center;
     z-index: 100;
     border-radius: 0; }
-
-.nav--top__item {
-  background-color: #ff944d;
-  			/* 
-  			 * Con estos dos nth-of-type seleccionamos los últimos dos DIV del menú 
-  			 * y los bajamos como si fueran un "menú inferior", PERO NO! son el mismo menú!
-   			*/ }
-  .nav--top__item:nth-last-of-type(1) {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 50%;
-    text-align: center;
-    border-left: 1px solid #27090d; }
-    .nav--top__item:nth-last-of-type(1) a {
-      padding: 0;
-      background-color: #ff944d; }
-  .nav--top__item:nth-last-of-type(2) {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50%;
-    text-align: center;
-    border-right: 1px solid #5d1520; }
-    .nav--top__item:nth-last-of-type(2) a {
-      padding: 0; }
-  .ie8-sucks .nav--top__item {
-    display: inline-block;
-    background-color: transparent;
-    margin-right: 24px; }
+  .nav--top__list li {
+    background-color: #ff944d;
+    			/* 
+    			 * Con estos dos nth-of-type seleccionamos los últimos dos DIV del menú 
+    			 * y los bajamos como si fueran un "menú inferior", PERO NO! son el mismo menú!
+     			*/ }
+    .nav--top__list li:nth-last-of-type(1) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50%;
+      text-align: center;
+      border-left: 1px solid #27090d; }
+      .nav--top__list li:nth-last-of-type(1) a {
+        padding: 0;
+        background-color: #ff944d; }
+    .nav--top__list li:nth-last-of-type(2) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+      text-align: center;
+      border-right: 1px solid #5d1520; }
+      .nav--top__list li:nth-last-of-type(2) a {
+        padding: 0; }
+    .ie8-sucks .nav--top__list li {
+      display: inline-block;
+      background-color: transparent;
+      margin-right: 24px; }
 
 /*
  * Ya que no le doy soporte a IE9 vamos a hacer el toggle con CSS3 y el hack
@@ -921,6 +931,57 @@ sub {
   cursor: pointer;
   margin: 0;
   z-index: 100; }
+
+/* 
+ * Ahora damos estilos al menú que nos permite navegar por las categorías del blog
+ */
+.nav--blog__list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  /* optional */
+  margin-bottom: 1.5em; }
+  .nav--blog__list li {
+    display: table-cell;
+    width: auto;
+    padding: 0 1px; }
+    .nav--blog__list li.current-menu-item a, .nav--blog__list li.current-menu-item a:visited {
+      background-color: #ff751a;
+      background-image: none; }
+  .nav--blog__list a, .nav--blog__list a:visited {
+    display: block;
+    line-height: 3;
+    background-color: #ff944d;
+    text-align: center;
+    font-size: 14px;
+    font-size: 0.875rem;
+    border-bottom: 5px solid #ff751a;
+    color: white;
+    text-transform: uppercase;
+    background-image: none; }
+    .nav--blog__list a:hover, .nav--blog__list a:visited:hover {
+      background-color: #ff751a;
+      text-decoration: none; }
+
+/* 
+ * Por vagancia meto aquí mismo la navegación de las entradas.
+ * Al ser pocas lineas, who cares?
+ */
+.posts-nav {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+  width: 100%;
+  border-top: 1px solid #bfbfbf;
+  padding-top: 0.75em; }
+
+.previous {
+  float: right; }
+
+.next {
+  float: left; }
 
 /*------------------------------------*\
     $PAGINACION
@@ -1007,7 +1068,7 @@ select,
 textarea {
   font-size: 14px;
   font-size: 0.875rem;
-  border-radius: 2px;
+  border-radius: 4px;
   vertical-align: baseline;
   *vertical-align: middle; }
 
@@ -1264,7 +1325,7 @@ input:required:focus:valid {
 @viewport {
   width: device-width; }
 html {
-  background: white;
+  background: #f8f5ef;
   font-size: 100%;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: white;
@@ -1280,7 +1341,8 @@ body {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5em;
-  color: #262626; }
+  color: #262626;
+  border-top: 5px solid #481019; }
 
 /**
 * A partir de aquí es donde debes escribir los estilos de posicionamiento
@@ -1298,7 +1360,7 @@ body {
   font-size: 14px;
   font-size: 0.875rem;
   color: #904809;
-  border-radius: 2px; }
+  border-radius: 4px; }
   .alert .alert--heading {
     color: inherit; }
   .alert .close {
@@ -1356,7 +1418,7 @@ body {
   font-size: 0.75rem;
   font-weight: bold;
   white-space: nowrap;
-  border-radius: 2px;
+  border-radius: 4px;
   color: #262626;
   background-color: #ff944d;
   -webkit-transition: background-color 0.25s 0 linear;
@@ -1400,7 +1462,7 @@ body {
 .well {
   min-height: 21px;
   padding: 11px;
-  border-radius: 2px;
+  border-radius: 4px;
   margin-bottom: 1.5em;
   background-color: white;
   border: 1px solid #ffc299;
