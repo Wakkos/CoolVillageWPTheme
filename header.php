@@ -62,6 +62,9 @@
 <meta name="msapplication-TileColor" content="#000">
 <meta http-equiv="cleartype" content="on">
 
+
+<link href='http://fonts.googleapis.com/css?family=Alegreya:400,700' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 

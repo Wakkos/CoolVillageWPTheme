@@ -22,8 +22,9 @@ h6 {
 	color : $baseheadingfontcolor;
 	text-rendering : optimizelegibility;
 	a, a:visited {
-		color: $secondary;
+		color: $textcolor;
 		line-height:1;
+		@include underline();
 	}
 }
 
@@ -73,6 +74,7 @@ address {
 	font-family: $basefont;
 	width: 100%;
 	background-color: $white;
+	@include box-shadow(-1px 0 2px rgba(0,0,0,0.5));
 }
 small {
 	@include font-size(12);

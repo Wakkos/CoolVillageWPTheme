@@ -1,13 +1,10 @@
 @charset "UTF-8";
 /*------------------------------------*\
-    $STYLE
+    $LT-IE9
 \*------------------------------------*/
 /**
- * Aquí incluímos todos los módulos (archivos .scss) que se can
- * a compilar en el CSS definitivo: /css/style.css.
- * Si no usas algún módulo, es recomendable que elimines
- * o comentes su inclusión para no tener estilos innecesarios en tu CSS final
- * y optimizar lo máximo posible.
+ * Esta hoja de estilos elimina los mediaqueries si trabajamos mobile first
+ * y crea una clase para ellos. La clase está en la variable $no-mq-classname.
  */
 /*------------------------------------*\
     $CONTENIDO
@@ -831,10 +828,9 @@ sub {
     margin-top: -8px;
     margin-left: -8px;
     color: white; }
-    @media (min-width: 48em) {
-      .nav--top:after {
-        content: normal;
-        content: none; } }
+    .ie8-sucks .nav--top:after {
+      content: normal;
+      content: none; }
   .nav--top a, .nav--top a:visited {
     color: white;
     display: block;
@@ -877,16 +873,15 @@ sub {
   width: 99vw;
   z-index: -1;
   height: 100vh; }
-  @media (min-width: 48em) {
-    .nav--top__list {
-      padding: 0 0 0 48px;
-      position: static;
-      width: auto;
-      display: block;
-      background: none;
-      text-align: center;
-      z-index: 100;
-      border-radius: 0; } }
+  .ie8-sucks .nav--top__list {
+    padding: 0 0 0 48px;
+    position: static;
+    width: auto;
+    display: block;
+    background: none;
+    text-align: center;
+    z-index: 100;
+    border-radius: 0; }
   .nav--top__list li {
     background-color: #ff944d;
     			/* 
@@ -912,11 +907,10 @@ sub {
       border-right: 1px solid #5d1520; }
       .nav--top__list li:nth-last-of-type(2) a {
         padding: 0; }
-    @media (min-width: 48em) {
-      .nav--top__list li {
-        display: inline-block;
-        background-color: transparent;
-        margin-right: 24px; } }
+    .ie8-sucks .nav--top__list li {
+      display: inline-block;
+      background-color: transparent;
+      margin-right: 24px; }
 
 /*
  * Ya que no le doy soporte a IE9 vamos a hacer el toggle con CSS3 y el hack
@@ -1364,110 +1358,6 @@ body {
 * y detalles que forman tu web. Disfruta!
 */
 /*------------------------------------*\
-    $HEADER
-\*------------------------------------*/
-.mainheader {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 40%;
-  width: 100%;
-  margin-bottom: 1.5em; }
-
-/*------------------------------------*\
-    $HOME
-\*------------------------------------*/
-.main--home {
-  margin-bottom: 24px; }
-
-.main--home__container {
-  margin-bottom: 1.5em; }
-
-.main--home__item {
-  position: relative;
-  padding: 1.5em 0 0 24px;
-  margin-left: 12px; }
-  .main--home__item::before {
-    content: "";
-    position: absolute;
-    top: 1.3em;
-    left: 0;
-    font-family: 'icomoon';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    font-size: 20px;
-    font-size: 1.25rem;
-    color: #481019;
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; }
-  .main--home__item:last-child {
-    margin-bottom: 24px; }
-
-/* Los Iconos del article */
-.blog::before {
-  content: "\f086"; }
-
-/*------------------------------------*\
-    $SIDEBAR / ASIDE
-\*------------------------------------*/
-aside {
-  background: #f0eadd;
-  padding: 1.5em 12px 3em; }
-
-.stimpy {
-  background-color: #f8f5ef;
-  border: 0px solid #481019;
-  border-radius: 1em;
-  padding: 1.5em 12px;
-  position: relative; }
-  .stimpy::after {
-    content: "";
-    position: absolute;
-    width: 73px;
-    height: 52px;
-    background-image: url("img/stimpy.png");
-    right: 0;
-    bottom: -53px; }
-  .stimpy::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    right: 80px;
-    bottom: -32px;
-    border: 16px solid;
-    border-color: #f8f5ef #f8f5ef transparent transparent; }
-
-/*------------------------------------*\
-    $FOOTER
-\*------------------------------------*/
-/* 
- * Tarjeteamos directamente al footer, eso no se hace peeeeero no creo
- * que usemos footers diferentes en esta web. Así que paso de clases =P
- */
-footer {
-  background-color: #481019;
-  border-top: 5px solid #ff751a;
-  color: white;
-  padding: 1.5em 24px;
-  font-size: 14px;
-  font-size: 0.875rem; }
-  footer a, footer a:visited {
-    background: none; }
-
-.footer__logo {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100px;
-  width: 100%;
-  margin-bottom: 1.5em; }
-
-/*------------------------------------*\
     $TEXTURAS
 \*------------------------------------*/
 .alert {
@@ -1616,5 +1506,3 @@ footer {
   /*
    * Breakpoint para dispositivos retina
    */ }
-
-/*# sourceMappingURL=style.css.map */

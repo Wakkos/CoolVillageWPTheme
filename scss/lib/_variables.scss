@@ -81,12 +81,12 @@ $animationtime :      .8s;
  * $altfont para textos alternativos, como citas, intro, etc...
  * $codefont para código
  */
-$basefont : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$basefont : "Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
 $altfont : Georgia, Times, "Times New Roman";
 $codefont : "Courier New", monospace;
 $baseheadingfont : 'Alegreya', serif;
 
-$baseheadingfontweight : bold;
+$baseheadingfontweight : 700;
 $baseheadingfontcolor : inherit;
 
 $altlineheight : 1.35em;
@@ -119,7 +119,7 @@ $basefontsize :      16;
  */
 $basecolor      : rgb(255,148,77); // Naranja
 $basecolor-light: lighten($basecolor, 5%);
-$blue           : #a1e2f3;
+$blue           : rgb(50,153,187);
 $secondary      : #481019; // Rojo CoolVillage
 $bordercolor    : lighten($secondary, 50); // Verde Bordes
 $compcolor      : rgb(216,240,227); //
@@ -143,9 +143,9 @@ $textcolor       : $darkergrey;
 $textcolor-strong:$black;
 
 // Links  //////////////////////
-$linkcolor 		    : $secondary;
+$linkcolor 		    : $basecolor;
 $linkcolorhover 	: darken($linkcolor, 10);
-$linkcolorvisited   : $basecolor;
+$linkcolorvisited   : $linkcolor;
 $linkcolorfocus 	: darken($linkcolorvisited, 10);
 
 // Borde Inferior /////////////////

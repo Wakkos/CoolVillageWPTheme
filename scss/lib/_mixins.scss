@@ -377,9 +377,8 @@
             #{$property}:$value;
 }
 
-@mixin underline($color : $lightgrey, $thikness : 2px, $position : 93%) {
+@mixin underline($color : $lightergrey, $thikness : 2px, $position : 88%) {
 	text-decoration : none;
-	color : $linkcolor;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to($color));
 	background-image: -webkit-linear-gradient(top, transparent 50%, $color 50%);
 	background-image: linear-gradient(to bottom, transparent 50%, $color 50%);

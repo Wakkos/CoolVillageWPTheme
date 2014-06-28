@@ -1,0 +1,28 @@
+
+
+
+
+
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+
+/* 
+ * Tarjeteamos directamente al footer, eso no se hace peeeeero no creo
+ * que usemos footers diferentes en esta web. Así que paso de clases =P
+ */
+footer {
+	background-color: $secondary;
+	border-top: $border--bottom;
+	color: $white;
+	padding:$baseline $gutterwidth;
+	@include font-size(14);
+	a, a:visited {
+		background: none;
+	}
+}
+
+	.footer__logo {
+		@include max-width(100px);
+		margin-bottom: $baseline;
+	}
