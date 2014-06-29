@@ -2,8 +2,31 @@
     $HEADER
 \*------------------------------------*/
 
+.header-container {
+	@extend %clearfix;
+	@include max-width;
+	@include media-query-bp($bp2) {
+		display: table;
+		font-weight:normal;
+		@include font-size(14);
+		border-bottom: $border--bottom;
+		padding: ($gutterwidth / 2) ($baseline / 2);
+		font-family: $basefont;
+		width: 100%;
+		background-color: $white;
+		@include box-shadow(-1px 0 2px rgba(0,0,0,0.5));
+		margin-bottom: $baseline;
+	}
+}
+
 .mainheader {
 	text-align: center;
 	@include max-width(40%);
 	margin-bottom: $baseline;
+	@include media-query-bp($bp2) {
+		display: table-cell;
+		width: 10%;
+		margin-bottom: 0;
+		vertical-align: middle;
+    }
 }

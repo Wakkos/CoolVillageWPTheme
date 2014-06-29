@@ -707,6 +707,15 @@ address {
   background-color: white;
   -webkit-box-shadow: -1px 0 2px rgba(0, 0, 0, 0.5);
   box-shadow: -1px 0 2px rgba(0, 0, 0, 0.5); }
+  .ie8-sucks .home-intro {
+    display: table-cell;
+    width: 90%;
+    vertical-align: middle;
+    border-bottom: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 0 0.75em 0 3em; }
 
 small {
   font-size: 12px;
@@ -808,13 +817,19 @@ sub {
 .nav--top {
   position: absolute;
   top: 0;
-  left: 12px;
+  left: 1vw;
   z-index: 10;
   width: 44px;
   height: 52.8px;
   color: white;
   overflow: hidden;
   cursor: pointer; }
+  .ie8-sucks .nav--top {
+    overflow: visible;
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5em; }
   .nav--top:after {
     content: "☰";
     font-size: 16px;
@@ -839,7 +854,6 @@ sub {
     background-image: none;
     line-height: 3;
     text-transform: uppercase;
-    background-color: white;
     font-size: 14px;
     font-size: 0.875rem;
     border-bottom: 1px solid #27090d;
@@ -854,6 +868,13 @@ sub {
     .nav--top a:hover, .nav--top a:visited:hover {
       text-decoration: none;
       background-color: #1e070b; }
+    .ie8-sucks .nav--top a, .ie8-sucks .nav--top a:visited {
+      padding: 0 12px;
+      text-align: center;
+      line-height: 2;
+      font-size: 12px;
+      font-size: 0.75rem;
+      text-shadow: none; }
 
 .nav--top__list {
   list-style: none;
@@ -874,14 +895,18 @@ sub {
   z-index: -1;
   height: 100vh; }
   .ie8-sucks .nav--top__list {
-    padding: 0 0 0 48px;
+    height: auto;
+    padding: 0;
     position: static;
-    width: auto;
-    display: block;
+    display: table;
     background: none;
-    text-align: center;
+    text-align: left;
     z-index: 100;
-    border-radius: 0; }
+    border-radius: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1024px;
+    width: 100%; }
   .nav--top__list li {
     background-color: #ff944d;
     			/* 
@@ -898,6 +923,12 @@ sub {
       .nav--top__list li:nth-last-of-type(1) a {
         padding: 0;
         background-color: #ff944d; }
+      .ie8-sucks .nav--top__list li:nth-last-of-type(1) {
+        position: static;
+        bottom: auto;
+        right: auto;
+        width: auto;
+        border-left: none; }
     .nav--top__list li:nth-last-of-type(2) {
       position: absolute;
       bottom: 0;
@@ -907,10 +938,18 @@ sub {
       border-right: 1px solid #5d1520; }
       .nav--top__list li:nth-last-of-type(2) a {
         padding: 0; }
+      .ie8-sucks .nav--top__list li:nth-last-of-type(2) {
+        position: static;
+        bottom: auto;
+        right: auto;
+        width: auto;
+        border-left: none; }
     .ie8-sucks .nav--top__list li {
-      display: inline-block;
+      display: table-cell;
       background-color: transparent;
-      margin-right: 24px; }
+      margin-right: 0;
+      padding: 0;
+      width: 25%; }
 
 /*
  * Ya que no le doy soporte a IE9 vamos a hacer el toggle con CSS3 y el hack
@@ -949,13 +988,19 @@ sub {
   padding: 0;
   width: 100%;
   display: table;
-  table-layout: fixed;
-  /* optional */
-  margin-bottom: 1.5em; }
+  margin-bottom: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+  width: 100%; }
+  .ie8-sucks .nav--blog__list {
+    margin-bottom: 0; }
   .nav--blog__list li {
     display: table-cell;
     width: auto;
-    padding: 0 1px; }
+    padding-right: 2px; }
+    .nav--blog__list li:last-child {
+      padding-right: 0; }
     .nav--blog__list li.current-menu-item a, .nav--blog__list li.current-menu-item a:visited {
       background-color: #ff751a;
       background-image: none; }
@@ -964,8 +1009,9 @@ sub {
     line-height: 3;
     background-color: #ff944d;
     text-align: center;
-    font-size: 14px;
-    font-size: 0.875rem;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: bold;
     border-bottom: 5px solid #ff751a;
     color: white;
     text-transform: uppercase;
@@ -1352,6 +1398,8 @@ body {
   line-height: 1.5em;
   color: #262626;
   border-top: 5px solid #481019; }
+  .ie8-sucks body {
+    border-top: none; }
 
 /**
 * A partir de aquí es donde debes escribir los estilos de posicionamiento

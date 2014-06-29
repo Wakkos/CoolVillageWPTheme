@@ -20,9 +20,15 @@ footer {
 	a, a:visited {
 		background: none;
 	}
+	@include media-query-bp($bp2) {
+		@include columns(33.3333%, 3,50px, $bordercolor,solid);
+	}
 }
 
 	.footer__logo {
 		@include max-width(100px);
 		margin-bottom: $baseline;
+		@include media-query-bp($bp2) {
+			@include vendor(column-span, all);
+		}
 	}

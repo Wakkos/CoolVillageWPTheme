@@ -10,6 +10,10 @@
 aside {
 	background: darken($background, 5);	
 	padding: $baseline ($gutterwidth / 2) ($baseline * 2);
+	@include media-query-bp($bp2) {
+		display: table-cell;
+		width: 32%;
+	}
 }
 
 	.stimpy {

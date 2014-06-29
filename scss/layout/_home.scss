@@ -7,14 +7,29 @@
     $HOME
 \*------------------------------------*/
 
-.main--home {
-	margin-bottom: $gutterwidth;
+.main--twocols {
+	margin-bottom: $baseline;
+	width: 100%;
+	@include media-query-bp($bp2) {
+		display: table;
+	}
+	@include media-query-bp($bp3) {
+		@include max-width();
+		@include box-shadow(0 0 1px 1px rgba(0,0,0,0.1));
+	}
 }
-	.main--home__container {
-		margin-bottom: $baseline;
+	.main--twocols__container {
+		padding-bottom: $baseline;
+
+		@include media-query-bp($bp2) {
+			display: table-cell;
+		}
+		@include media-query-bp($bp3) {
+			 background-color: $white;
+		}
 	}
 
-		.main--home__item {
+		.main--twocols__item {
 			position: relative;
 			padding:$baseline 0 0 $gutterwidth;
 			margin-left: ($gutterwidth / 2);

@@ -75,6 +75,18 @@ address {
 	width: 100%;
 	background-color: $white;
 	@include box-shadow(-1px 0 2px rgba(0,0,0,0.5));
+	@include media-query-bp($bp2) {
+		display: table-cell;
+		width: 90%;
+		vertical-align: middle;
+
+		// Quitamos los estilos para dárselos al contenedor
+		// y así que parezca que el logo ahora está dentro
+		border-bottom: none;
+		background-color: transparent;
+		@include box-shadow(none);
+		padding: 0 ($baseline / 2) 0 ($baseline  * 2);
+    }
 }
 small {
 	@include font-size(12);

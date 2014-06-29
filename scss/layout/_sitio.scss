@@ -47,6 +47,10 @@ body {
 	line-height : $baselineheight;
 	color : $textcolor;
 	border-top:5px solid $secondary;
+	
+	@include media-query-bp($bp2) {
+		border-top: none;
+	}
 }
 
 /**
