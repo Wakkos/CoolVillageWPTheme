@@ -829,7 +829,7 @@ sub {
     position: static;
     width: 100%;
     height: auto;
-    margin-bottom: 1.5em; }
+    margin-bottom: 0.75em; }
   .nav--top:after {
     content: "☰";
     font-size: 16px;

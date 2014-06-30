@@ -22,10 +22,7 @@
                 </article>
         <?php endwhile; ?>
         <!-- post navigation -->
-            <div class="posts-nav">
-                <div class="previous btn"><?php next_posts_link( 'ANTERIORES' ); ?></div>
-                <div class="next btn"><?php previous_posts_link( 'RECIENTES' ); ?></div>
-            </div>
+            <?php include( TEMPLATEPATH . '/templates/global__next-prev.php' ); ?>
         <?php else: ?>
         <!-- no posts found -->
         <?php endif; ?>

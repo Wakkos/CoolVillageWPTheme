@@ -834,7 +834,7 @@ sub {
       position: static;
       width: 100%;
       height: auto;
-      margin-bottom: 1.5em; } }
+      margin-bottom: 0.75em; } }
   .nav--top:after {
     content: "☰";
     font-size: 16px;
@@ -1439,7 +1439,7 @@ body {
       background-color: white;
       -webkit-box-shadow: -1px 0 2px rgba(0, 0, 0, 0.5);
       box-shadow: -1px 0 2px rgba(0, 0, 0, 0.5);
-      margin-bottom: 1.5em; } }
+      margin-bottom: 0.75em; } }
 
 .mainheader {
   text-align: center;
@@ -1459,7 +1459,6 @@ body {
     $HOME
 \*------------------------------------*/
 .main--twocols {
-  margin-bottom: 1.5em;
   width: 100%; }
   @media (min-width: 37.5em) {
     .main--twocols {
