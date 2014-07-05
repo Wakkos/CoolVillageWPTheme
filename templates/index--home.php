@@ -1,6 +1,8 @@
 <!-- Si, es obvio: le daremos un comportamiento de tabla con "display:table" -->
 <main class="main--twocols">
     <section role="main" class="main--twocols__container">
+    <!-- La navegación del blog -->
+    <?php include( TEMPLATEPATH . '/templates/role__navigation--blog.php' ); ?>
         <?php rewind_posts(); ?>
         <?php query_posts( "category_name=blog,tweet&posts_per_page=8" ) ?>
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

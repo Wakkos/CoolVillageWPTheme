@@ -715,7 +715,11 @@ address {
     background-color: transparent;
     -webkit-box-shadow: none;
     box-shadow: none;
-    padding: 0 0.75em 0 3em; }
+    padding: 0 0.75em 0 3em;
+    font-size: 20px;
+    font-size: 1.25rem; }
+  .home-intro a, .home-intro a:visited {
+    color: #ff944d; }
 
 small {
   font-size: 12px;
@@ -828,8 +832,7 @@ sub {
     overflow: visible;
     position: static;
     width: 100%;
-    height: auto;
-    margin-bottom: 0.75em; }
+    height: auto; }
   .nav--top:after {
     content: "☰";
     font-size: 16px;
@@ -871,10 +874,11 @@ sub {
     .ie8-sucks .nav--top a, .ie8-sucks .nav--top a:visited {
       padding: 0 12px;
       text-align: center;
-      line-height: 2;
-      font-size: 12px;
-      font-size: 0.75rem;
-      text-shadow: none; }
+      line-height: 3;
+      font-size: 14px;
+      font-size: 0.875rem;
+      text-shadow: none;
+      font-weight: bold; }
 
 .nav--top__list {
   list-style: none;
@@ -1006,11 +1010,11 @@ sub {
       background-image: none; }
   .nav--blog__list a, .nav--blog__list a:visited {
     display: block;
-    line-height: 3;
+    line-height: 2;
     background-color: #ff944d;
     text-align: center;
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: bold;
     border-bottom: 5px solid #ff751a;
     color: white;
@@ -1029,8 +1033,7 @@ sub {
   margin-right: auto;
   max-width: 80%;
   width: 100%;
-  border-top: 1px solid #bfbfbf;
-  padding-top: 0.75em; }
+  padding-top: 3em; }
 
 .previous {
   float: left; }

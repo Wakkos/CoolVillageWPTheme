@@ -6,5 +6,5 @@
 	</header>
 
 	<h1 class="home-intro">CoolVillage es la web de Daniel Martínez (<a href="https://twitter.com/Wakkos">@Wakkos</a>), consultor, 
-	profesor y tutor de CSS, HTML y arquitectura Front-end en general. </h1>
+	profesor y tutor de CSS, HTML y arquitectura frontend en general. </h1>
 </div>

@@ -11,6 +11,7 @@
 	width: 100%;
 	@include media-query-bp($bp2) {
 		display: table;
+
 	}
 	@include media-query-bp($bp3) {
 		@include max-width();
@@ -22,6 +23,7 @@
 
 		@include media-query-bp($bp2) {
 			display: table-cell;
+			vertical-align: top;
 		}
 		@include media-query-bp($bp3) {
 			 background-color: $white;

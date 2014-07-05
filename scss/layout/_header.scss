@@ -5,12 +5,13 @@
 .header-container {
 	@extend %clearfix;
 	@include max-width;
+	margin-top:$baseline * 2;
 	@include media-query-bp($bp2) {
 		display: table;
 		font-weight:normal;
 		@include font-size(14);
 		border-bottom: $border--bottom;
-		padding: ($gutterwidth / 2) ($baseline / 2);
+		padding: ($gutterwidth) ($baseline / 2);
 		font-family: $basefont;
 		width: 100%;
 		background-color: $white;
@@ -20,12 +21,13 @@
 }
 
 .mainheader {
-	text-align: center;
-	@include max-width(40%);
-	margin-bottom: $baseline;
+	position: absolute;
+	right:5px;
+	top:5px;
+	width: 60px;
 	@include media-query-bp($bp2) {
 		display: table-cell;
-		width: 10%;
+		width: 15%;
 		margin-bottom: 0;
 		vertical-align: middle;
     }

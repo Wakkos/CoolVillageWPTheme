@@ -24,7 +24,6 @@
 		position: static;
 		width: 100%;
 		height:auto;
-		margin-bottom: $baseline / 2;
     }
 
     &:after {
@@ -66,9 +65,10 @@
         @include media-query-bp($bp2) {
 			padding:0 ($gutterwidth / 2);
 			text-align: center;
-			line-height: 2;
-			@include font-size(12);
+			line-height: 3;
+			@include font-size(14);
 			text-shadow: none;
+			font-weight: bold;
         }
     }
 }
@@ -232,10 +232,10 @@
 
 	a, a:visited {
 		display: block;
-		line-height: 3;
+		line-height: 2;
 		background-color: $basecolor;
 		text-align: center;
-		@include font-size(16);
+		@include font-size(14);
 		font-weight: bold;
 		border-bottom: $border--bottom;
 		color:$white;
@@ -254,8 +254,7 @@
  .posts-nav {
  	@include max-width(80%);
  	@extend %clearfix;
- 	border-top: 1px solid $lightgrey;
- 	padding-top: $baseline / 2;
+ 	padding-top: $baseline * 2;
  }
  	.previous {
  		float: left;

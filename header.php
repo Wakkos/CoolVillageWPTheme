@@ -73,6 +73,3 @@
 
 <!-- El Encabezado (Logo) -->
 <?php include( TEMPLATEPATH . '/templates/role__banner.php' ); ?>
-
-<!-- La navegación del blog -->
-<?php include( TEMPLATEPATH . '/templates/role__navigation--blog.php' ); ?>

@@ -86,7 +86,11 @@ address {
 		background-color: transparent;
 		@include box-shadow(none);
 		padding: 0 ($baseline / 2) 0 ($baseline  * 2);
+		@include font-size(20);
     }
+    a, a:visited {
+		color: $linkcolor;
+	}
 }
 small {
 	@include font-size(12);
