@@ -700,13 +700,15 @@ address {
   font-weight: normal;
   font-size: 14px;
   font-size: 0.875rem;
-  border-bottom: 5px solid #ff751a;
-  padding: 12px 0.75em;
-  font-family: "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  padding: 4.5em 96px 0.75em 12px;
   width: 100%;
-  background-color: white;
-  -webkit-box-shadow: -1px 0 2px rgba(0, 0, 0, 0.5);
-  box-shadow: -1px 0 2px rgba(0, 0, 0, 0.5); }
+  height: 16vh;
+  color: #ba9c61;
+  text-shadow: 1px 1px 1px white;
+  background-image: url("img/wakkos.jpg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 50%; }
   .ie8-sucks .home-intro {
     display: table-cell;
     width: 90%;
@@ -720,6 +722,13 @@ address {
     font-size: 1.25rem; }
   .home-intro a, .home-intro a:visited {
     color: #ff944d; }
+  .home-intro h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    font-size: 1.375rem; }
+
+.crazy-vh .home-intro {
+  height: 100vh; }
 
 small {
   font-size: 12px;

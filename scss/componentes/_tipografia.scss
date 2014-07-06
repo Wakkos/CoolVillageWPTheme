@@ -69,13 +69,16 @@ address {
 .home-intro {
 	font-weight:normal;
 	@include font-size(14);
-	border-bottom: $border--bottom;
-	padding: ($gutterwidth / 2) ($baseline / 2);
-	font-family: $basefont;
+	padding:($baseline * 3) ($gutterwidth * 4) ($baseline / 2) ($gutterwidth / 2);
 	width: 100%;
-	background-color: $white;
-	@include box-shadow(-1px 0 2px rgba(0,0,0,0.5));
-	@include media-query-bp($bp2) {
+	height: 16vh;
+	color: darken($background, 40);
+	text-shadow:1px 1px 1px white;
+	background-image:url("#{$image-dir}/wakkos.jpg");
+	background-repeat:no-repeat;
+	background-position:right bottom;
+	background-size: 50%;
+		@include media-query-bp($bp2) {
 		display: table-cell;
 		width: 90%;
 		vertical-align: middle;
@@ -91,6 +94,14 @@ address {
     a, a:visited {
 		color: $linkcolor;
 	}
+	h1 {
+		font-family: 'Oswald', sans-serif;
+		@include font-size(22);
+	}
+}
+
+.crazy-vh .home-intro {
+	height: 100vh;
 }
 small {
 	@include font-size(12);

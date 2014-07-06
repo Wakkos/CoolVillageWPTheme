@@ -5,7 +5,6 @@
 .header-container {
 	@extend %clearfix;
 	@include max-width;
-	margin-top:$baseline * 2;
 	@include media-query-bp($bp2) {
 		display: table;
 		font-weight:normal;
@@ -23,12 +22,20 @@
 .mainheader {
 	position: absolute;
 	right:5px;
-	top:5px;
-	width: 60px;
+	top:10px;
+	width: 50px;
 	@include media-query-bp($bp2) {
 		display: table-cell;
+		position:relative;
+		right:auto;
+		top:auto;
 		width: 15%;
 		margin-bottom: 0;
 		vertical-align: middle;
     }
+}
+
+.logo {
+	border:1px solid lighten($basecolor, 25);
+	display:block;
 }
