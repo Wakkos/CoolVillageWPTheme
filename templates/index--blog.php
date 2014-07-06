@@ -1,13 +1,13 @@
 <!-- Si, es obvio: le daremos un comportamiento de tabla con "display:table" -->
-<main class="main--twocols">
-    <section role="main" class="main--twocols__container">
+<main class="blog--twocols">
+    <section role="main" class="blog--twocols__container">
     <!-- La navegación del blog -->
     <?php include( TEMPLATEPATH . '/templates/role__navigation--blog.php' ); ?>
         <?php rewind_posts(); ?>
         <?php query_posts( "category_name=blog,tweet&posts_per_page=8" ) ?>
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <?php $category = get_the_category(); ?>
-            <article class="main--twocols__item  <?php echo $category[0]->cat_name; ?> portada">
+            <article class="blog--twocols__item  <?php echo $category[0]->cat_name; ?> portada">
                 <header>                         
                     <h2>
                         <?php $url = rwmb_meta('cool_url'); ?>
@@ -32,4 +32,4 @@
     
     <!-- Incluimos el sidebar aquí -->
     <?php get_sidebar(); ?>
-</main>
+</blog>

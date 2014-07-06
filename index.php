@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header('home'); ?>
 
 <!-- El contenido de la HOME -->
 <?php include( TEMPLATEPATH . '/templates/index--home.php' ); ?>

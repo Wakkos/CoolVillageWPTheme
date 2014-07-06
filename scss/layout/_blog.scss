@@ -1,0 +1,66 @@
+
+
+
+
+
+/*------------------------------------*\
+    $BLOG
+\*------------------------------------*/
+
+.blog--twocols {
+	width: 100%;
+	@include media-query-bp($bp2) {
+		display: table;
+
+	}
+	@include media-query-bp($bp3) {
+		@include max-width();
+		@include box-shadow(0 0 1px 1px rgba(0,0,0,0.1));
+	}
+}
+	.blog--twocols__container {
+		padding-bottom: $baseline;
+
+		@include media-query-bp($bp2) {
+			display: table-cell;
+			vertical-align: top;
+		}
+		@include media-query-bp($bp3) {
+			 background-color: $white;
+		}
+	}
+
+		.blog--twocols__item {
+			position: relative;
+			padding:$baseline 0 0 $gutterwidth;
+			margin-left: ($gutterwidth / 2);
+			
+			&::before {
+				content:"";
+				position: absolute;
+				top: $baseline - .2;
+				left:0;
+				font-family: 'icomoon';
+				speak: none;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				@include font-size(20);
+				color: $secondary;
+
+				/* Better Font Rendering =========== */
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+
+			&:last-child {
+				margin-bottom: $gutterwidth;
+			}
+		}
+
+			/* Los Iconos del article */
+			.blog::before {
+				content: "\f086";
+			}

@@ -699,41 +699,6 @@ address {
 .intro {
   font-weight: bold; }
 
-.home-intro {
-  font-weight: normal;
-  font-size: 14px;
-  font-size: 0.875rem;
-  padding: 4.5em 96px 0.75em 12px;
-  width: 100%;
-  height: 16vh;
-  color: #ba9c61;
-  text-shadow: 1px 1px 1px white;
-  background-image: url("img/wakkos.jpg");
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: 50%; }
-  @media (min-width: 37.5em) {
-    .home-intro {
-      display: table-cell;
-      width: 90%;
-      vertical-align: middle;
-      border-bottom: none;
-      background-color: transparent;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      padding: 0 0.75em 0 3em;
-      font-size: 20px;
-      font-size: 1.25rem; } }
-  .home-intro a, .home-intro a:visited {
-    color: #ff944d; }
-  .home-intro h1 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 22px;
-    font-size: 1.375rem; }
-
-.crazy-vh .home-intro {
-  height: 100vh; }
-
 small {
   font-size: 12px;
   font-size: 0.75rem;
@@ -1475,58 +1440,36 @@ body {
 /*------------------------------------*\
     $HOME
 \*------------------------------------*/
-.main--twocols {
-  width: 100%; }
+.home-intro {
+  font-weight: normal;
+  font-size: 14px;
+  font-size: 0.875rem;
+  padding: 4.5em 96px 0.75em 12px;
+  width: 100%;
+  color: #481019;
+  text-shadow: 1px 1px 1px white;
+  background-image: url("img/wakkos.jpg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 50%; }
   @media (min-width: 37.5em) {
-    .main--twocols {
-      display: table; } }
-  @media (min-width: 48em) {
-    .main--twocols {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 1024px;
-      width: 100%;
-      -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
-      box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1); } }
-
-.main--twocols__container {
-  padding-bottom: 1.5em; }
-  @media (min-width: 37.5em) {
-    .main--twocols__container {
+    .home-intro {
       display: table-cell;
-      vertical-align: top; } }
-  @media (min-width: 48em) {
-    .main--twocols__container {
-      background-color: white; } }
-
-.main--twocols__item {
-  position: relative;
-  padding: 1.5em 0 0 24px;
-  margin-left: 12px; }
-  .main--twocols__item::before {
-    content: "";
-    position: absolute;
-    top: 1.3em;
-    left: 0;
-    font-family: 'icomoon';
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    font-size: 20px;
-    font-size: 1.25rem;
-    color: #481019;
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; }
-  .main--twocols__item:last-child {
-    margin-bottom: 24px; }
-
-/* Los Iconos del article */
-.blog::before {
-  content: "\f086"; }
+      width: 90%;
+      vertical-align: middle;
+      border-bottom: none;
+      background-color: transparent;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      padding: 0 0.75em 0 3em;
+      font-size: 20px;
+      font-size: 1.25rem; } }
+  .home-intro a, .home-intro a:visited {
+    color: #ff944d; }
+  .home-intro h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    font-size: 1.375rem; }
 
 /*------------------------------------*\
     $SIDEBAR / ASIDE
@@ -1613,6 +1556,62 @@ footer {
       -ms-column-span: all;
       -o-column-span: all;
       column-span: all; } }
+
+/*------------------------------------*\
+    $BLOG
+\*------------------------------------*/
+.blog--twocols {
+  width: 100%; }
+  @media (min-width: 37.5em) {
+    .blog--twocols {
+      display: table; } }
+  @media (min-width: 48em) {
+    .blog--twocols {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1024px;
+      width: 100%;
+      -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1); } }
+
+.blog--twocols__container {
+  padding-bottom: 1.5em; }
+  @media (min-width: 37.5em) {
+    .blog--twocols__container {
+      display: table-cell;
+      vertical-align: top; } }
+  @media (min-width: 48em) {
+    .blog--twocols__container {
+      background-color: white; } }
+
+.blog--twocols__item {
+  position: relative;
+  padding: 1.5em 0 0 24px;
+  margin-left: 12px; }
+  .blog--twocols__item::before {
+    content: "";
+    position: absolute;
+    top: 1.3em;
+    left: 0;
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: 20px;
+    font-size: 1.25rem;
+    color: #481019;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .blog--twocols__item:last-child {
+    margin-bottom: 24px; }
+
+/* Los Iconos del article */
+.blog::before {
+  content: "\f086"; }
 
 /*------------------------------------*\
     $TEXTURAS
