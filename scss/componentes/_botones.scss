@@ -20,7 +20,8 @@
 	color : $textcolor;
 	text-align : center;
 	vertical-align : middle;
-	@include font-size(12);
+	@include font-size(14);
+	font-family:'Oswald', sans-serif;
 	white-space:nowrap;
 	background-color : $buttonbackground;
 	border : none;
@@ -30,8 +31,7 @@
    	padding-bottom:0;
    	padding-right:1em;
    	padding-left: 1em;
-	border-radius: $radius;
-
+   	text-transform: uppercase;
 	/**
  	* Nadie quiere un botón con texto subrayado cuando
  	* hacemos hover.
@@ -152,6 +152,18 @@ input[type="submit"].btn:hover {
 	}
 }
 
+
+.btn--calltoaction {
+	@include max-width(100%);
+	display:block;
+	margin-bottom: 1px;
+	background-color:$basecolor;
+	color:$white;
+	font-weight: bold;
+}
+a.btn--calltoaction, a.btn--calltoaction:visited {
+	color:$white;
+}
 .btn--inactive,
 .btn--inactive:hover,
 .btn--inactive:active,

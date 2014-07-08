@@ -73,4 +73,4 @@
 <?php include( TEMPLATEPATH . '/templates/role__navigation--top.php' ); ?>
 
 <!-- El Encabezado (Logo) -->
-<?php include( TEMPLATEPATH . '/templates/role__banner.php' ); ?>
+<?php include( TEMPLATEPATH . '/templates/role__banner--home.php' ); ?>

@@ -319,8 +319,9 @@ table {
   color: #262626;
   text-align: center;
   vertical-align: middle;
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-family: 'Oswald', sans-serif;
   white-space: nowrap;
   background-color: #481019;
   border: none;
@@ -330,7 +331,7 @@ table {
   padding-bottom: 0;
   padding-right: 1em;
   padding-left: 1em;
-  border-radius: 4px;
+  text-transform: uppercase;
   	/**
    	* Nadie quiere un botón con texto subrayado cuando
    	* hacemos hover.
@@ -420,6 +421,20 @@ input[type="submit"].btn:hover {
     color: #fcf3f3; }
   .btn--warning:visited {
     color: #48110f; }
+
+.btn--calltoaction {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  margin-bottom: 1px;
+  background-color: #ff944d;
+  color: white;
+  font-weight: bold; }
+
+a.btn--calltoaction, a.btn--calltoaction:visited {
+  color: white; }
 
 .btn--inactive,
 .btn--inactive:hover,

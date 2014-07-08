@@ -10,14 +10,14 @@
 .home-intro {
 	font-weight:normal;
 	@include font-size(14);
-	padding:($baseline * 3) ($gutterwidth * 4) ($baseline / 2) ($gutterwidth / 2);
+	padding:($baseline * 3) ($gutterwidth * 4) 0 ($gutterwidth / 2);
 	width: 100%;
 	color: $secondary;
 	text-shadow:1px 1px 1px white;
 	background-image:url("#{$image-dir}/wakkos.jpg");
 	background-repeat:no-repeat;
-	background-position:right bottom;
-	background-size: 50%;
+	background-position:right $baseline * 2;
+	background-size: 40%;
 		@include media-query-bp($bp2) {
 		display: table-cell;
 		width: 90%;
@@ -39,3 +39,14 @@
 		@include font-size(22);
 	}
 }
+
+.actions {
+	background-color:darken($background, 10);
+	padding:($baseline / 2) ($gutterwidth / 2);
+}
+
+	.actions__text {
+		@include font-size(16);
+		@include max-width(90%);
+		line-height: 1.2
+	}
