@@ -32,7 +32,7 @@ html {
 	background : $background;
 	font-size : 100%;
 	-webkit-overflow-scrolling : touch;
-	-webkit-tap-highlight-color : lighten($basecolor, 75%);
+	-webkit-tap-highlight-color : transparent;
 	-webkit-text-size-adjust : 100%;
 	-ms-text-size-adjust : 100%;
 }
@@ -47,8 +47,8 @@ body {
 	line-height : $baselineheight;
 	color : $textcolor;
 	border-top:5px solid $secondary;
-	
-	@include media-query-bp($bp2) {
+
+	@include respond-to("medium") {
 		border-top: none;
 	}
 }
@@ -57,3 +57,4 @@ body {
 * A partir de aquí es donde debes escribir los estilos de posicionamiento
 * y detalles que forman tu web. Disfruta!
 */
+

@@ -24,7 +24,6 @@ h6 {
 	a, a:visited {
 		color: $textcolor;
 		line-height:1;
-		@include underline();
 	}
 }
 
@@ -33,8 +32,8 @@ h2 small,
 h3 small {
 	font-weight : normal;
 	display: block;
-	color : $grey;
-	line-height: 1;
+	color : $black;
+	line-height: 1.2;
 }
 
 @each $header, $margin-bot, $font-size, $line-height in (h1, 2, 32, 1.2)

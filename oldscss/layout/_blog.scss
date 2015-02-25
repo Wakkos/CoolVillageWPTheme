@@ -7,7 +7,7 @@
     $BLOG
 \*------------------------------------*/
 
-.blog--twocols {
+.home-content {
 	width: 100%;
 	@include media-query-bp($bp2) {
 		display: table;
@@ -18,7 +18,7 @@
 		@include box-shadow(0 0 1px 1px rgba(0,0,0,0.1));
 	}
 }
-	.blog--twocols__container {
+	.home-content__main {
 		padding-bottom: $baseline;
 
 		@include media-query-bp($bp2) {
@@ -30,7 +30,7 @@
 		}
 	}
 
-		.blog--twocols__item {
+		.main__item {
 			position: relative;
 			padding:$baseline 0 0 $gutterwidth;
 			margin-left: ($gutterwidth / 2);

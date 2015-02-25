@@ -10,15 +10,14 @@
 .home-intro {
 	font-weight:normal;
 	@include font-size(14);
-	padding:($baseline * 3) ($gutterwidth * 4) 0 ($gutterwidth / 2);
+	padding:($baseline * 3) ($gutterwidth / 2) 0 ($gutterwidth / 2);
 	width: 100%;
 	color: $secondary;
-	text-shadow:1px 1px 1px white;
 	background-image:url("#{$image-dir}/wakkos.jpg");
 	background-repeat:no-repeat;
-	background-position:right $baseline * 2;
+	background-position:right 0;
 	background-size: 40%;
-		@include media-query-bp($bp2) {
+		@include respond-to('medium') {
 		display: table-cell;
 		width: 90%;
 		vertical-align: middle;
@@ -27,22 +26,20 @@
 		// y así que parezca que el logo ahora está dentro
 		border-bottom: none;
 		background-color: transparent;
-		@include box-shadow(none);
 		padding: 0 ($baseline / 2) 0 ($baseline  * 2);
 		@include font-size(20);
     }
-    a, a:visited {
-		color: $linkcolor;
-	}
-	h1 {
+	.home-header {
 		font-family: 'Oswald', sans-serif;
 		@include font-size(22);
+		padding-right: ($gutterwidth * 4);
 	}
 }
 
 .actions {
-	background-color:darken($background, 10);
+	background-color: darken($background,10);
 	padding:($baseline / 2) ($gutterwidth / 2);
+	@include box-shadow(0 -1px 1px darken($background,20));
 }
 
 	.actions__text {
@@ -50,3 +47,70 @@
 		@include max-width(90%);
 		line-height: 1.2
 	}
+
+
+
+
+
+
+/*------------------------------------*\
+    $BLOG
+\*------------------------------------*/
+
+.home-content {
+	width: 100%;
+	@include respond-to("medium") {
+		display: table;
+
+	}
+	@include respond-to("medium") {
+		@include max-width();
+		@include box-shadow(0 0 1px 1px rgba(0,0,0,0.1));
+	}
+}
+	.home-content__main {
+		padding-bottom: $baseline;
+
+		@include respond-to("medium") {
+			display: table-cell;
+			vertical-align: top;
+		}
+		@include respond-to("medium") {
+			 background-color: $white;
+		}
+	}
+
+		.main__item {
+			position: relative;
+			padding:$baseline 0 0 $gutterwidth;
+			margin-left: ($gutterwidth / 2);
+			
+			&::before {
+				content:"";
+				position: absolute;
+				top: $baseline - .2;
+				left:0;
+				font-family: 'icomoon';
+				speak: none;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				@include font-size(20);
+				color: $secondary;
+
+				/* Better Font Rendering =========== */
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
+
+			&:last-child {
+				margin-bottom: $gutterwidth;
+			}
+		}
+
+			/* Los Iconos del article */
+			.blog::before {
+				content: "\f086";
+			}

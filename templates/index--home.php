@@ -1,0 +1,1 @@
+<?php include( TEMPLATEPATH . '/templates/index--blog.php' ); ?>

@@ -14,10 +14,10 @@
  /**
  * .btn es la clase principal para definir un botón
  */
-.btn {
+.btn, .btn:link {
 	display : inline-block;
 	line-height : $baselineheight * 1.5;
-	color : $textcolor;
+	color : $white;
 	text-align : center;
 	vertical-align : middle;
 	@include font-size(14);
@@ -36,10 +36,6 @@
  	* Nadie quiere un botón con texto subrayado cuando
  	* hacemos hover.
  	*/
-
- 	a, a:visited {
-		color: $basecolor;
- 	}
 	&:hover {
 		text-decoration : none;
 	}
@@ -47,9 +43,6 @@
     &:focus{
         outline:none;
     }
-    &:visited {
-	color : $basecolor;
-	}
 }
 
 /*------------------------------------*\
@@ -118,7 +111,7 @@ input[type="submit"].btn:hover {
 		color : lighten($basecolor, 40%);
 	}
 	&:visited {
-		color : darken($basecolor, 40%);
+		color: $white;
 	}
 }
 
@@ -153,17 +146,16 @@ input[type="submit"].btn:hover {
 }
 
 
-.btn--calltoaction {
-	@include max-width(100%);
-	display:block;
-	margin-bottom: 1px;
-	background-color:$basecolor;
-	color:$white;
+.btn--two {
 	font-weight: bold;
+	width:50%;
 }
-a.btn--calltoaction, a.btn--calltoaction:visited {
-	color:$white;
+
+.btn.btn--call {
+	width:49%;
+	@include font-size(18);
 }
+
 .btn--inactive,
 .btn--inactive:hover,
 .btn--inactive:active,

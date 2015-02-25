@@ -313,10 +313,10 @@ table {
 /**
 * .btn es la clase principal para definir un botón
 */
-.btn {
+.btn, .btn:link {
   display: inline-block;
   line-height: 2.25em;
-  color: #262626;
+  color: white;
   text-align: center;
   vertical-align: middle;
   font-size: 14px;
@@ -336,14 +336,10 @@ table {
    	* Nadie quiere un botón con texto subrayado cuando
    	* hacemos hover.
    	*/ }
-  .btn a, .btn a:visited {
-    color: #ff944d; }
-  .btn:hover {
+  .btn:hover, .btn:link:hover {
     text-decoration: none; }
-  .btn:active, .btn:focus {
+  .btn:active, .btn:focus, .btn:link:active, .btn:link:focus {
     outline: none; }
-  .btn:visited {
-    color: #ff944d; }
 
 /*------------------------------------*\
     $BOTONES-VARIANTES
@@ -398,7 +394,7 @@ input[type="submit"].btn:hover {
   .btn--primary:hover {
     color: white; }
   .btn--primary:visited {
-    color: #803300; }
+    color: white; }
 
 /**
 * Botón de OK
@@ -422,19 +418,14 @@ input[type="submit"].btn:hover {
   .btn--warning:visited {
     color: #48110f; }
 
-.btn--calltoaction {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  width: 100%;
-  display: block;
-  margin-bottom: 1px;
-  background-color: #ff944d;
-  color: white;
-  font-weight: bold; }
+.btn--two {
+  font-weight: bold;
+  width: 50%; }
 
-a.btn--calltoaction, a.btn--calltoaction:visited {
-  color: white; }
+.btn.btn--call {
+  width: 49%;
+  font-size: 18px;
+  font-size: 1.125rem; }
 
 .btn--inactive,
 .btn--inactive:hover,
@@ -629,23 +620,15 @@ h6 {
   h6 a,
   h6 a:visited {
     color: #262626;
-    line-height: 1;
-    text-decoration: none;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#e6e6e6));
-    background-image: -webkit-linear-gradient(top, transparent 50%, #e6e6e6 50%);
-    background-image: linear-gradient(to bottom, transparent 50%, #e6e6e6 50%);
-    background-repeat: repeat-x;
-    -webkit-background-size: 2px 2px;
-    background-size: 2px 2px;
-    background-position: 0 88%; }
+    line-height: 1; }
 
 h1 small,
 h2 small,
 h3 small {
   font-weight: normal;
   display: block;
-  color: gray;
-  line-height: 1; }
+  color: black;
+  line-height: 1.2; }
 
 h1, .h1 {
   margin-bottom: 0.75em;

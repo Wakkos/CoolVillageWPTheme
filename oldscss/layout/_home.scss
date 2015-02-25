@@ -1,0 +1,49 @@
+
+
+
+
+
+/*------------------------------------*\
+    $HOME
+\*------------------------------------*/
+
+.home-intro {
+	font-weight:normal;
+	@include font-size(14);
+	padding:($baseline * 3) ($gutterwidth / 2) 0 ($gutterwidth / 2);
+	width: 100%;
+	color: $secondary;
+	background-image:url("#{$image-dir}/wakkos.jpg");
+	background-repeat:no-repeat;
+	background-position:right $baseline * 2;
+	background-size: 40%;
+		@include media-query-bp($bp2) {
+		display: table-cell;
+		width: 90%;
+		vertical-align: middle;
+
+		// Quitamos los estilos para dárselos al contenedor
+		// y así que parezca que el logo ahora está dentro
+		border-bottom: none;
+		background-color: transparent;
+		@include box-shadow(none);
+		padding: 0 ($baseline / 2) 0 ($baseline  * 2);
+		@include font-size(20);
+    }
+	h1 {
+		font-family: 'Oswald', sans-serif;
+		@include font-size(22);
+		padding-right: ($gutterwidth * 4);
+	}
+}
+
+.actions {
+	background-color:darken($background, 10);
+	padding:($baseline / 2) ($gutterwidth / 2);
+}
+
+	.actions__text {
+		@include font-size(16);
+		@include max-width(90%);
+		line-height: 1.2
+	}

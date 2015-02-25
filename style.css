@@ -3,12 +3,146 @@
     $STYLE
 \*------------------------------------*/
 /**
- * Aquí incluímos todos los módulos (archivos .scss) que se can
+ * Aquí incluímos todos los módulos (archivos .scss) que se van
  * a compilar en el CSS definitivo: /css/style.css.
- * Si no usas algún módulo, es recomendable que elimines
- * o comentes su inclusión para no tener estilos innecesarios en tu CSS final
- * y optimizar lo máximo posible.
  */
+/**
+* Librerías
+**/
+/*------------------------------------*\
+    $SETTINGS
+\*------------------------------------*/
+/*------------------------------------*\
+    $OBJETOS Y ABSTRACCIONES
+\*------------------------------------*/
+/**
+ * Qué objetos y abstracciones vamos a usar? (true: se usa, false: no se usa)
+ */
+/**
+ *
+ * Definimos y configuramos las variables CSS que vamos a utilizar
+ *
+ */
+/*------------------------------------*\
+    $BREAKPOINTS
+\*------------------------------------*/
+/**
+ * "Start with the small screen first, then expand until it looks like shit. Time to insert a breakpoint!"
+ */
+/*------------------------------------*\
+    $IMAGE-DIR
+\*------------------------------------*/
+/**
+ * Con agregar esta variable a las imágenes declaradas en CSS apañamos:
+ */
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+/**
+ * Definimos elementos constantes del layout
+ */
+/*------------------------------------*\
+    $grid
+\*------------------------------------*/
+/*------------------------------------*\
+    $FONT-FACE
+\*------------------------------------*/
+/**
+ * Definimos las fuentes a utilizar:
+ * $basefont para todos los textos inline
+ * $altfont para textos alternativos, como citas, intro, etc...
+ * $codefont para código
+ */
+/*------------------------------------*\
+    $TAMAÑOS
+\*------------------------------------*/
+/**
+ * Definimos las fuentes a utilizar:
+ * $basefont para todos los textos inline
+ * $altfont para textos alternativos, como citas, intro, etc...
+ * $codefont para código
+ */
+/*------------------------------------*\
+    $COLORS
+\*------------------------------------*/
+/**
+ * Brand stuff
+ */
+/**
+ * Escala de grises
+ * A veces no queremos que el negro sea "negro" o el blanco "blanco", puedes cambiarlos.
+ */
+/*------------------------------------*\
+    $TEXTURAS
+\*------------------------------------*/
+/**
+ * Definimos Colores y elementos de popups, mensajes de alerta, etc...
+ */
+/* Colores sociales -> son los colores corporativos, pero cambiadlos
+ * si hace falta. (también podéis añadir más)  ///////////////////////
+ */
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*
+* Fácil de usar: las variables a usar están en settings.scss y son:
+
+    'small'  : 48em,
+    'medium' : 56.25em,
+    'large'  : 68.75em,
+
+* Y el uso va como sigue:
+
+.foo {
+  color: red;
+  @include respond-to('small') {
+    color: blue;
+  }
+}
+*/
+/*
+* Esto deberíamos eliminarlo ya, no? El primer Commit gana!
+*/
+/**
+* Centrar y dar un ancho máximo igual a $pagemaxwidth.
+*/
+/*
+ * Función para controlar el index
+ */
+/*------------------------------------*\
+    $PLACEHOLDERS
+\*------------------------------------*/
+/**
+* The ghost, nudged to maintain perfect centering
+*/
+/**
+* Escondemos el texto solo VISUALMENTE
+*/
+/**
+* Escondemos el texto de VISUALMENTE y SCREENREADERS
+*/
+/**
+* Escondemos pero mantenemos layout.
+*/
+/**
+* Visualmente escondido, pero se puede detectar con teclado (focus).
+*/
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  position: static;
+  clip: auto;
+  height: auto;
+  width: auto;
+  margin: 0;
+  overflow: visible; }
+
+/**
+* Clear floats.
+* http://bit.ly/1e3YaBH
+*/
+/**
+* Bases
+**/
 /*------------------------------------*\
     $CONTENIDO
 \*------------------------------------*/
@@ -50,128 +184,9 @@
  * Patron........................ Estilos para la guía de patrones
  */
 /*------------------------------------*\
-    $VARIABLES
-\*------------------------------------*/
-/**
- *
- * Definimos y configuramos las variables CSS que vamos a utilizar
- *
- */
-/*------------------------------------*\
-    $BREAKPOINTS
-\*------------------------------------*/
-/**
- * "Start with the small screen first, then expand until it looks like shit. Time to insert a breakpoint!"
- */
-/*------------------------------------*\
-    $no-mediaquery-class
-\*------------------------------------*/
-/**
- * Si decides incluir lt-ie9 para dar soporte a navegadores sin estilos
- * esta es la clase que se añadirá a todos los elementos.
- */
-/*------------------------------------*\
-    $IMAGE-DIR
-\*------------------------------------*/
-/**
- * Con agregar esta variable a las imágenes declaradas en CSS apañamos:
- */
-/*------------------------------------*\
-    $LAYOUT
-\*------------------------------------*/
-/**
- * Definimos elementos constantes del layout
- */
-/*------------------------------------*\
-    $FONT-FACE
-\*------------------------------------*/
-/**
- * Definimos las fuentes a utilizar:
- * $basefont para todos los textos inline
- * $altfont para textos alternativos, como citas, intro, etc...
- * $codefont para código
- */
-/*------------------------------------*\
-    $TAMAÑOS
-\*------------------------------------*/
-/**
- * Definimos las fuentes a utilizar:
- * $basefont para todos los textos inline
- * $altfont para textos alternativos, como citas, intro, etc...
- * $codefont para código
- */
-/*------------------------------------*\
-    $COLORS
-\*------------------------------------*/
-/**
- * Brand stuff
- */
-/**
- * Escala de grises
- * A veces no queremos que el negro sea "negro" o el blanco "blanco", puedes cambiarlos.
- */
-/*------------------------------------*\
-    $TEXTURAS
-\*------------------------------------*/
-/**
- * Definimos Colores y elementos de popups, mensajes de alerta, etc...
- */
-/* Colores sociales -> son los colores corporativos, pero cambiadlos
- * si hace falta. (también podéis añadir más)  ///////////////////////
- */
-/**
- * Very simple, pared-back, mobile-first, responsive nav.
- */
-/*------------------------------------*\
-    $MIXINS
-\*------------------------------------*/
-/**
-* Centrar y dar un ancho máximo igual a $pagemaxwidth.
-*/
-/*------------------------------------*\
-    $PLACEHOLDERS
-\*------------------------------------*/
-/**
-* The ghost, nudged to maintain perfect centering
-*/
-/**
-* Escondemos el texto solo VISUALMENTE
-*/
-/**
-* Escondemos el texto de VISUALMENTE y SCREENREADERS
-*/
-/**
-* Escondemos pero mantenemos layout.
-*/
-/**
-* Visualmente escondido, pero se puede detectar con teclado (focus).
-*/
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  position: static;
-  clip: auto;
-  height: auto;
-  width: auto;
-  margin: 0;
-  overflow: visible; }
-
-/**
-* Clear floats.
-* http://bit.ly/1e3YaBH
-*/
-.posts-nav:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-/**
-* Gradientes los ocnvertimos en placeholders porque imprime 10 millones de
-* líneas inútiles en el CSS
-*/
-/*------------------------------------*\
     $RESET
 \*------------------------------------*/
-html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, main, menu, nav, section, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -180,7 +195,18 @@ html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquo
   vertical-align: baseline;
   background: transparent; }
 
-article, aside, figure, footer, header, hgroup, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
   display: block; }
 
 *, *::before, *::after {
@@ -190,407 +216,15 @@ article, aside, figure, footer, header, hgroup, nav, section {
   -o-box-sizing: border-box;
   box-sizing: border-box; }
 
-li {
-  list-style-type: none; }
-
-/*------------------------------------*\
-    $FUENTES
-\*------------------------------------*/
-/*
- * Por defecto incluyo una fuente de icomoon (http://icomoon.io/)
- * con 5 iconos que se encuentra en la carpeta /fonts.
- * Ve y adàptalos a tu web.
- */
-@font-face {
-  font-family: 'icomoon';
-  src: url("fonts/icomoon.eot?6vdqpe");
-  src: url("fonts/icomoon.eot?#iefix6vdqpe") format("embedded-opentype"), url("fonts/icomoon.woff?6vdqpe") format("woff"), url("fonts/icomoon.ttf?6vdqpe") format("truetype"), url("fonts/icomoon.svg?6vdqpe#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-.icon-comments:before {
-  content: "\f086"; }
-
-.icon-play:before {
-  content: "\e601"; }
-
-.icon-link:before {
-  content: "\e602"; }
-
-/*------------------------------------*\
-    $LINKS
-\*------------------------------------*/
-a {
-  text-decoration: none;
-  color: #ff944d; }
-  a:visited {
-    color: #ff944d; }
-  a:hover {
-    text-decoration: none;
-    color: #ff751a; }
-  a:focus {
-    outline: thin dotted;
-    color: #ff751a; }
-  a:hover, a:active {
-    outline: 0; }
-
-/*------------------------------------*\
-    $TABLAS
-\*------------------------------------*/
-table {
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 1.5em;
-  border-collapse: collapse;
-  border-spacing: 0;
-  background-color: transparent; }
-  table th,
-  table td {
-    padding: 8px;
-    vertical-align: top;
-    border-top: 1px solid white;
-    font-size: 14px;
-    font-size: 0.875rem;
-    line-height: 1.5em;
-    text-align: left; }
-  table th {
-    font-weight: bold; }
-  table thead th {
-    vertical-align: bottom; }
-  table colgroup + thead tr:first-child th,
-  table colgroup + thead tr:first-child td,
-  table thead:first-child tr:first-child th,
-  table thead:first-child tr:first-child td {
-    border-top: 0; }
-  table tbody + tbody {
-    border-top: 2px solid white; }
-  table tbody tr td,
-  table tbody tr th {
-    -webkit-transition: background-color 0.25s 0 linear;
-    -moz-transition: background-color 0.25s 0 linear;
-    -ms-transition: background-color 0.25s 0 linear;
-    -o-transition: background-color 0.25s 0 linear;
-    transition: background-color 0.25s 0 linear; }
-  table tbody tr:hover td,
-  table tbody tr:hover th {
-    background-color: white; }
-
-.table-condensed th,
-.table-condensed td {
-  padding: 4px 5px; }
-
-.table-bordered {
-  border: 1px solid white;
-  border-left: 0;
-  border-collapse: separate;
-  *border-collapse: collapsed; }
-  .table-bordered th,
-  .table-bordered td {
-    border-left: 1px solid white; }
-  .table-bordered thead:first-child tr:first-child th,
-  .table-bordered tbody:first-child tr:first-child th,
-  .table-bordered tbody:first-child tr:first-child td {
-    border-top: 0; }
-
-.table-striped tbody tr:nth-child(odd) td,
-.table-striped tbody tr:nth-child(odd) th {
-  background-color: white; }
-
-/*------------------------------------*\
-    $BOTONES
-\*------------------------------------*/
-/*
- * Definimos los botones y sus variantes
- */
-/**
-* .btn es la clase principal para definir un botón
-*/
-.btn {
-  display: inline-block;
-  line-height: 2.25em;
-  color: #262626;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-family: 'Oswald', sans-serif;
-  white-space: nowrap;
-  background-color: #481019;
-  border: none;
-  cursor: pointer;
-  margin: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-right: 1em;
-  padding-left: 1em;
-  text-transform: uppercase;
-  	/**
-   	* Nadie quiere un botón con texto subrayado cuando
-   	* hacemos hover.
-   	*/ }
-  .btn a, .btn a:visited {
-    color: #ff944d; }
-  .btn:hover {
-    text-decoration: none; }
-  .btn:active, .btn:focus {
-    outline: none; }
-  .btn:visited {
-    color: #ff944d; }
-
-/*------------------------------------*\
-    $BOTONES-VARIANTES
-\*------------------------------------*/
-/**
- * Variantes de los botones: color para dar sensaciones.
- *
- */
-/**
-* Inputs con estilo de botones
-*/
-input[type="submit"].btn:hover {
-  border-color: #1e070b; }
-
-/**
-* Botón no disponible
-*/
-.btn--disabled {
-  -webkit-opacity: 0.5;
-  -moz-opacity: 0.5;
-  opacity: 0.5;
-  cursor: default; }
-
-/**
-* Botón de Error
-*/
-.btn--error {
-  background-color: #da4f49;
-  color: #48110f; }
-  .btn--error:hover {
-    color: #fcf3f3; }
-  .btn--error:visited {
-    color: #48110f; }
-
-/**
-* Botón de Info
-*/
-.btn--info {
-  background-color: #a5dddf;
-  color: #308588; }
-  .btn--info:hover {
-    color: white; }
-  .btn--info:visited {
-    color: #308588; }
-
-/**
-* Botón principal
-*/
-.btn--primary {
-  background-color: #ff944d;
-  color: white; }
-  .btn--primary:hover {
-    color: white; }
-  .btn--primary:visited {
-    color: #803300; }
-
-/**
-* Botón de OK
-*/
-.btn--success {
-  background-color: #5bb75b;
-  color: #153115; }
-  .btn--success:hover {
-    color: #e9f5e9; }
-  .btn--success:visited {
-    color: #153115; }
-
-/**
-* Botón de advertencia
-*/
-.btn--warning {
-  background-color: #da4f49;
-  color: #48110f; }
-  .btn--warning:hover {
-    color: #fcf3f3; }
-  .btn--warning:visited {
-    color: #48110f; }
-
-.btn--calltoaction {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  width: 100%;
-  display: block;
-  margin-bottom: 1px;
-  background-color: #ff944d;
-  color: white;
-  font-weight: bold; }
-
-a.btn--calltoaction, a.btn--calltoaction:visited {
-  color: white; }
-
-.btn--inactive,
-.btn--inactive:hover,
-.btn--inactive:active,
-.btn--inactive:focus {
-  -webkit-opacity: 0.5;
-  -moz-opacity: 0.5;
-  opacity: 0.5;
-  cursor: default; }
-
-/*------------------------------------*\
-    $BOTONES-TAMAÑOS
-\*------------------------------------*/
-/**
- * Variantes de los botones por tamaño.
- *
- */
-.btn--mini {
-  padding-right: 0.5em;
-  padding-left: 0.5em;
-  line-height: 1.5; }
-
-.btn--small {
-  padding-right: 1.5em;
-  padding-left: 1.5em;
-  line-height: 2; }
-
-.btn--large {
-  padding-right: 3em;
-  padding-left: 3em;
-  line-height: 3; }
-
-/*------------------------------------*\
-    $BOTONES-GRUPOS
-\*------------------------------------*/
-/**
- * Con esta clase podemos agrupar los botones
- * en grupos horizontales.
- *
- */
-.btn--group {
-  position: relative;
-  *margin-left: .3em; }
-
-.btn--group .btn {
-  position: relative;
-  border-radius: 0;
-  float: left;
-  margin-left: -1px; }
-
-.btn--group .btn:first-child {
-  margin-left: 0;
-  -webkit-border-top-right-radius: 0;
-  -webkit-border-bottom-right-radius: 0;
-  -webkit-border-bottom-left-radius: 4px;
-  -webkit-border-top-left-radius: 4px;
-  -moz-border-radius-topright: 0;
-  -moz-border-radius-bottomright: 0;
-  -moz-border-radius-bottomleft: 4px;
-  -moz-border-radius-topleft: 4px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 4px;
-  border-top-left-radius: 4px;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box; }
-
-.btn--group .btn:last-child {
-  -webkit-border-top-right-radius: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  -webkit-border-bottom-left-radius: 0;
-  -webkit-border-top-left-radius: 0;
-  -moz-border-radius-topright: 4px;
-  -moz-border-radius-bottomright: 4px;
-  -moz-border-radius-bottomleft: 0;
-  -moz-border-radius-topleft: 0;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box; }
-
-.btn--group .btn.large:first-child {
-  margin-left: 0;
-  -webkit-border-top-right-radius: 4px;
-  -webkit-border-bottom-right-radius: 0;
-  -webkit-border-bottom-left-radius: 4px;
-  -webkit-border-top-left-radius: 0;
-  -moz-border-radius-topright: 4px;
-  -moz-border-radius-bottomright: 0;
-  -moz-border-radius-bottomleft: 4px;
-  -moz-border-radius-topleft: 0;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 4px;
-  border-top-left-radius: 0;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box; }
-
-.btn--group .btn.large:last-child {
-  -webkit-border-top-right-radius: 0;
-  -webkit-border-bottom-right-radius: 4px;
-  -webkit-border-bottom-left-radius: 0;
-  -webkit-border-top-left-radius: 4px;
-  -moz-border-radius-topright: 0;
-  -moz-border-radius-bottomright: 4px;
-  -moz-border-radius-bottomleft: 0;
-  -moz-border-radius-topleft: 4px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 4px;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box; }
-
-/*------------------------------------*\
-    $ELEMENTOS
-\*------------------------------------*/
-hr {
-  clear: both;
-  display: block;
-  margin: 3em 0;
-  padding: 0;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #e17687; }
-
-/*------------------------------------*\
-    $ELEMENTOS-IMÁGENES
-\*------------------------------------*/
 img {
   max-width: 100%;
   border-width: 0;
   vertical-align: middle;
   -ms-interpolation-mode: bicubic; }
 
-.img--rounded {
-  border-radius: 16px; }
-
-.img--polaroid {
-  padding: 12px;
-  background-color: white;
-  border: 1px solid #e17687;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
-
-.img--circle {
-  border-radius: 100%; }
-
+/**
+* Selectores de elemento: un super "normalize":
+**/
 /*------------------------------------*\
     $ELEMENTOS-FIGURE
 \*------------------------------------*/
@@ -605,489 +239,6 @@ figure {
     font-size: 0.875rem;
     font-style: italic;
     color: gray; }
-
-/*------------------------------------*\
-    $TIPOGRAFÍA
-\*------------------------------------*/
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  font-family: "Alegreya", serif;
-  font-weight: 700;
-  color: inherit;
-  text-rendering: optimizelegibility; }
-  h1 a, h1 a:visited,
-  h2 a,
-  h2 a:visited,
-  h3 a,
-  h3 a:visited,
-  h4 a,
-  h4 a:visited,
-  h5 a,
-  h5 a:visited,
-  h6 a,
-  h6 a:visited {
-    color: #262626;
-    line-height: 1;
-    text-decoration: none;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#e6e6e6));
-    background-image: -webkit-linear-gradient(top, transparent 50%, #e6e6e6 50%);
-    background-image: linear-gradient(to bottom, transparent 50%, #e6e6e6 50%);
-    background-repeat: repeat-x;
-    -webkit-background-size: 2px 2px;
-    background-size: 2px 2px;
-    background-position: 0 88%; }
-
-h1 small,
-h2 small,
-h3 small {
-  font-weight: normal;
-  display: block;
-  color: gray;
-  line-height: 1; }
-
-h1, .h1 {
-  margin-bottom: 0.75em;
-  font-size: 32px;
-  font-size: 2rem;
-  line-height: 1.2; }
-
-h2, .h2 {
-  margin-bottom: Infinityem;
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1.2; }
-
-h3, .h3 {
-  margin-bottom: 0.375em;
-  font-size: 21px;
-  font-size: 1.3125rem;
-  line-height: 1.3; }
-
-h4, .h4 {
-  margin-bottom: 0.25em;
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 1.25; }
-
-h5, .h5 {
-  margin-bottom: 0.25em;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1; }
-
-h6, .h6 {
-  margin-bottom: 0.25em;
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1; }
-
-p,
-ol,
-ul,
-dl,
-address {
-  margin-bottom: 1.5em;
-  line-height: 1.5em; }
-  p a, p a:visited,
-  ol a,
-  ol a:visited,
-  ul a,
-  ul a:visited,
-  dl a,
-  dl a:visited,
-  address a,
-  address a:visited {
-    text-decoration: none;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#e6e6e6));
-    background-image: -webkit-linear-gradient(top, transparent 50%, #e6e6e6 50%);
-    background-image: linear-gradient(to bottom, transparent 50%, #e6e6e6 50%);
-    background-repeat: repeat-x;
-    -webkit-background-size: 2px 2px;
-    background-size: 2px 2px;
-    background-position: 0 88%; }
-
-.intro {
-  font-weight: bold; }
-
-small {
-  font-size: 12px;
-  font-size: 0.75rem;
-  color: black; }
-
-blockquote {
-  margin: 0 0 1.5em 0;
-  padding-left: 24px;
-  border-left: 2px solid #e17687;
-  font-family: Georgia, Times, "Times New Roman";
-  font-style: normal; }
-  blockquote p {
-    font-size: 18px;
-    font-size: 1.125rem;
-    color: gray;
-    font-style: italic; }
-
-q {
-  quotes: none;
-  font-style: italic; }
-
-blockquote p::before,
-blockquote p::after,
-q:before,
-q:after {
-  content: ""; }
-
-cite {
-  font-style: normal; }
-
-dl,
-dd {
-  margin-bottom: 1.5em; }
-
-dt {
-  font-weight: bold; }
-
-.dl-horizontal dt {
-  float: left;
-  clear: left;
-  width: 20.25%;
-  text-align: right; }
-.dl-horizontal dd {
-  margin-left: 22.78%; }
-
-abbr[title] {
-  border-bottom: 1px dotted #e17687;
-  cursor: help; }
-
-b, strong {
-  font-weight: bold; }
-
-dfn {
-  font-style: italic; }
-
-ins {
-  background-color: white;
-  color: #262626;
-  text-decoration: none; }
-
-mark {
-  background-color: yellow;
-  color: #262626; }
-
-pre,
-code,
-kbd,
-samp {
-  font-family: "Courier New", monospace;
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.5em; }
-
-pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word; }
-
-sub,
-sup {
-  position: relative;
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 0;
-  vertical-align: 1.5em; }
-
-sup {
-  top: -.5em; }
-
-sub {
-  bottom: -.25em; }
-
-/*------------------------------------*\
-    $NAVEGACIÓN
-\*------------------------------------*/
-/**
-*/
-.nav--top {
-  position: absolute;
-  top: 0;
-  left: 1vw;
-  z-index: 10;
-  width: 44px;
-  height: 52.8px;
-  color: white;
-  overflow: hidden;
-  cursor: pointer; }
-  @media (min-width: 37.5em) {
-    .nav--top {
-      overflow: visible;
-      position: static;
-      width: 100%;
-      height: auto; } }
-  .nav--top:after {
-    content: "☰";
-    font-size: 16px;
-    font-size: 1rem;
-    width: 1em;
-    line-height: 1;
-    text-align: left;
-    position: absolute;
-    top: 50%;
-    left: 24px;
-    margin-top: -8px;
-    margin-left: -8px;
-    color: white; }
-    @media (min-width: 37.5em) {
-      .nav--top:after {
-        content: normal;
-        content: none; } }
-  .nav--top a, .nav--top a:visited {
-    color: white;
-    display: block;
-    padding-left: 14px;
-    line-height: 44px;
-    background-image: none;
-    line-height: 3;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-size: 0.875rem;
-    border-bottom: 1px solid #27090d;
-    border-top: 1px solid #5d1520;
-    background-color: #481019;
-    text-shadow: 1px 1px 1px #5d1520;
-    -webkit-transition: background 0.3s ease;
-    -moz-transition: background 0.3s ease;
-    -ms-transition: background 0.3s ease;
-    -o-transition: background 0.3s ease;
-    transition: background 0.3s ease; }
-    .nav--top a:hover, .nav--top a:visited:hover {
-      text-decoration: none;
-      background-color: #1e070b; }
-    @media (min-width: 37.5em) {
-      .nav--top a, .nav--top a:visited {
-        padding: 0 12px;
-        text-align: center;
-        line-height: 3;
-        font-size: 14px;
-        font-size: 0.875rem;
-        text-shadow: none;
-        font-weight: bold; } }
-
-.nav--top__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  padding-top: 52.8px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #481019;
-  -webkit-box-shadow: inset -100px -50px 100px 100px rgba(0, 0, 0, 0.2);
-  box-shadow: inset -100px -50px 100px 100px rgba(0, 0, 0, 0.2);
-  		/* 
-           * Usamos VW porque con % tomaría el tamaño del contenedor, 
-           * que es $nav-width (unos 48px) y no se ve na' e ná
-           */
-  width: 99vw;
-  z-index: -1;
-  height: 100vh; }
-  @media (min-width: 37.5em) {
-    .nav--top__list {
-      height: auto;
-      padding: 0;
-      position: static;
-      display: table;
-      background: none;
-      text-align: left;
-      z-index: 100;
-      border-radius: 0;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 1024px;
-      width: 100%; } }
-  .nav--top__list li {
-    background-color: #ff944d;
-    			/* 
-    			 * Con estos dos nth-of-type seleccionamos los últimos dos DIV del menú 
-    			 * y los bajamos como si fueran un "menú inferior", PERO NO! son el mismo menú!
-     			*/ }
-    .nav--top__list li:nth-last-of-type(1) {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 50%;
-      text-align: center;
-      border-left: 1px solid #27090d; }
-      .nav--top__list li:nth-last-of-type(1) a {
-        padding: 0;
-        background-color: #ff944d; }
-      @media (min-width: 37.5em) {
-        .nav--top__list li:nth-last-of-type(1) {
-          position: static;
-          bottom: auto;
-          right: auto;
-          width: auto;
-          border-left: none; } }
-    .nav--top__list li:nth-last-of-type(2) {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 50%;
-      text-align: center;
-      border-right: 1px solid #5d1520; }
-      .nav--top__list li:nth-last-of-type(2) a {
-        padding: 0; }
-      @media (min-width: 37.5em) {
-        .nav--top__list li:nth-last-of-type(2) {
-          position: static;
-          bottom: auto;
-          right: auto;
-          width: auto;
-          border-left: none; } }
-    @media (min-width: 37.5em) {
-      .nav--top__list li {
-        display: table-cell;
-        background-color: transparent;
-        margin-right: 0;
-        padding: 0;
-        width: 25%; } }
-
-/*
- * Ya que no le doy soporte a IE9 vamos a hacer el toggle con CSS3 y el hack
- * del checkbox : http://codepen.io/Wakkos/pen/xAhdq
- */
-.checkbox__hack {
-  display: none;
-  	/*
-   	 * Quitamos el overflow:hidden para que se muestre el menú
-   	 * Eso es todo, un overflow. Con eso mostramos u ocultamos el menú.
-   	 * (Eso y el content del after para que sea una X y no la hamburguesa)
-   	 */ }
-  .checkbox__hack:checked ~ .nav--top {
-    overflow: visible; }
-    .checkbox__hack:checked ~ .nav--top::after {
-      content: "x"; }
-
-.checkbox-hack__label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 100%;
-  height: 52.8px;
-  color: white;
-  overflow: hidden;
-  cursor: pointer;
-  margin: 0;
-  z-index: 100; }
-
-/* 
- * Ahora damos estilos al menú que nos permite navegar por las categorías del blog
- */
-.nav--blog__list {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: table;
-  margin-bottom: 1.5em;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1024px;
-  width: 100%; }
-  @media (min-width: 48em) {
-    .nav--blog__list {
-      margin-bottom: 0; } }
-  .nav--blog__list li {
-    display: table-cell;
-    width: auto;
-    padding-right: 2px; }
-    .nav--blog__list li:last-child {
-      padding-right: 0; }
-    .nav--blog__list li.current-menu-item a, .nav--blog__list li.current-menu-item a:visited {
-      background-color: #ff751a;
-      background-image: none; }
-  .nav--blog__list a, .nav--blog__list a:visited {
-    display: block;
-    line-height: 2;
-    background-color: #ff944d;
-    text-align: center;
-    font-size: 14px;
-    font-size: 0.875rem;
-    font-weight: bold;
-    border-bottom: 5px solid #ff751a;
-    color: white;
-    text-transform: uppercase;
-    background-image: none; }
-    .nav--blog__list a:hover, .nav--blog__list a:visited:hover {
-      background-color: #ff751a;
-      text-decoration: none; }
-
-/* 
- * Por vagancia meto aquí mismo la navegación de las entradas.
- * Al ser pocas lineas, who cares?
- */
-.posts-nav {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 80%;
-  width: 100%;
-  padding-top: 3em; }
-
-.previous {
-  float: left; }
-
-.next {
-  float: right; }
-
-/*------------------------------------*\
-    $PAGINACION
-\*------------------------------------*/
-/**
- * Paginación básica
- * Requiere algunos comentarios para evitar el espacio causado por
- * `display:inline-block;`.
- *
-   <ol class="nav  pagination">
-       <li class=pagination__first>First</li>
-       <li class=pagination__prev>Previous</li>
-       <li><a href=/page/1>1</a></li>
-       <li><a href=/page/2>2</a></li>
-       <li class=current><a href=/page/3>3</a></li>
-       <li><a href=/page/4>4</a></li>
-       <li><a href=/page/5>5</a></li>
-       <li class=pagination__next><a href=/page/next>Next</a></li>
-       <li class=pagination__last><a href=/page/last>Last</a></li>
-   </ol>
- *
- *
- * Thanks to @ccswizardry for this simple chunk of code!
- */
-.pagination {
-  text-align: center;
-  /**
-   * Remove whitespace caused by `inline-block`.
-   */
-  letter-spacing: -0.31em;
-  word-spacing: -0.43em; }
-
-.pagination > li {
-  display: inline-block;
-  padding: 12PX;
-  letter-spacing: normal;
-  word-spacing: normal; }
-
-.pagination > li > a {
-  padding: 12PX;
-  margin: -12px; }
-
-.pagination--first a:before {
-  content: "\00AB" "\00A0"; }
-
-.pagination--last a:after {
-  content: "\00A0" "\00BB"; }
 
 /*------------------------------------*\
     $FORMULARIOS
@@ -1127,7 +278,7 @@ select,
 textarea {
   font-size: 14px;
   font-size: 0.875rem;
-  border-radius: 4px;
+  border-radius: 2px;
   vertical-align: baseline;
   *vertical-align: middle; }
 
@@ -1371,6 +522,216 @@ input:required:focus:valid {
   border: 1px solid #5bb75b; }
 
 /*------------------------------------*\
+    $IMÁGENES
+\*------------------------------------*/
+/*------------------------------------*\
+    $LINKS
+\*------------------------------------*/
+a {
+  text-decoration: none;
+  color: #ff944d; }
+  a:visited {
+    color: #ff944d; }
+  a:hover {
+    text-decoration: underline;
+    color: #ff751a; }
+  a:focus {
+    outline: thin dotted;
+    color: #ff751a; }
+  a:hover, a:active {
+    outline: 0; }
+
+/*------------------------------------*\
+    $TIPOGRAFÍA
+\*------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: "Alegreya", serif;
+  font-weight: 700;
+  color: inherit;
+  text-rendering: optimizelegibility; }
+  h1.altheader,
+  h2.altheader,
+  h3.altheader,
+  h4.altheader,
+  h5.altheader,
+  h6.altheader {
+    color: gray;
+    text-transform: uppercase; }
+
+h1 small,
+h2 small,
+h3 small {
+  font-weight: normal;
+  display: block;
+  color: gray; }
+
+h1, .h1 {
+  margin-bottom: 0.75em;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.2; }
+
+h2, .h2 {
+  margin-bottom: 0.5em;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.2; }
+
+h3, .h3 {
+  margin-bottom: 0.375em;
+  font-size: 21px;
+  font-size: 1.3125rem;
+  line-height: 1.3; }
+
+h4, .h4 {
+  margin-bottom: 0.25em;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.25; }
+
+h5, .h5 {
+  margin-bottom: 0.25em;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1; }
+
+h6, .h6 {
+  margin-bottom: 0.25em;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1; }
+
+p,
+ol,
+ul,
+dl,
+address {
+  margin-bottom: 1.5em;
+  line-height: 1.5em; }
+
+.intro {
+  font-weight: bold; }
+
+small {
+  font-size: 12px;
+  font-size: 0.75rem;
+  color: gray; }
+
+ul,
+ol {
+  margin: 0 0 1.5em 0;
+  padding: 0 0 0 24px; }
+
+li ul,
+li ol {
+  margin: 0; }
+
+blockquote {
+  margin: 0 0 1.5em 0;
+  padding-left: 24px;
+  border-left: 2px solid #e17687;
+  font-family: Georgia, Times, "Times New Roman";
+  font-style: normal; }
+  blockquote p {
+    font-size: 18px;
+    font-size: 1.125rem;
+    color: gray;
+    font-style: italic; }
+
+q {
+  quotes: none;
+  font-style: italic; }
+
+blockquote p::before,
+blockquote p::after,
+q:before,
+q:after {
+  content: ""; }
+
+cite {
+  font-style: normal; }
+
+dl,
+dd {
+  margin-bottom: 1.5em; }
+
+dt {
+  font-weight: bold; }
+
+.dl-horizontal dt {
+  float: left;
+  clear: left;
+  width: 20.25%;
+  text-align: right; }
+.dl-horizontal dd {
+  margin-left: 22.78%; }
+
+abbr[title] {
+  border-bottom: 1px dotted #e17687;
+  cursor: help; }
+
+b, strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+ins {
+  background-color: white;
+  color: #262626;
+  text-decoration: none; }
+
+mark {
+  background-color: yellow;
+  color: #262626; }
+
+pre,
+code,
+kbd,
+samp {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.5em; }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+sub,
+sup {
+  position: relative;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 0;
+  vertical-align: 1.5em; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+hr {
+  clear: both;
+  display: block;
+  margin: 3em 0;
+  padding: 0;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #e17687; }
+
+/**
+* Layout del sitio
+**/
+/*------------------------------------*\
     $SITIO
 \*------------------------------------*/
 @-webkit-viewport {
@@ -1387,7 +748,7 @@ html {
   background: #f8f5ef;
   font-size: 100%;
   -webkit-overflow-scrolling: touch;
-  -webkit-tap-highlight-color: white;
+  -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
 
@@ -1402,7 +763,7 @@ body {
   line-height: 1.5em;
   color: #262626;
   border-top: 5px solid #481019; }
-  @media (min-width: 37.5em) {
+  @media (min-width: 56.25em) {
     body {
       border-top: none; } }
 
@@ -1411,8 +772,201 @@ body {
 * y detalles que forman tu web. Disfruta!
 */
 /*------------------------------------*\
-    $HEADER-HOME
+    $NAVEGACIÓN
 \*------------------------------------*/
+/**
+*
+* La semántica va como sigue:
+
+    <input type="checkbox" class="checkbox__hack" id="checkbox__hack">
+    <label for="checkbox__hack" class="checkbox-hack__label"></label>
+    <!-- OMG NO SEMANTIC HTML, well, it help us to avoid JS in the menu slide in mobile -->
+
+    <nav class="nav--top">
+        <ul class="nav--top__list">
+            <li><a href="">item</a></li>
+            <li><a href="">item</a></li>
+            <li><a href="">item</a></li>
+            <li><a href="">item</a></li>
+            <li><a href="">item</a></li>
+        </ul>
+    </nav>
+
+* Y no te olvides de modificar las variables en el archivo de variables ($nav-**)
+*/
+.nav--top {
+  position: absolute;
+  top: 0;
+  left: 1vw;
+  z-index: 10;
+  width: 44px;
+  height: 52.8px;
+  color: white;
+  overflow: hidden;
+  cursor: pointer; }
+  @media (min-width: 56.25em) {
+    .nav--top {
+      overflow: visible;
+      position: static;
+      width: 100%;
+      height: auto; } }
+  .nav--top:after {
+    content: "☰";
+    font-size: 16px;
+    font-size: 1rem;
+    width: 1em;
+    line-height: 1;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    margin-top: -8px;
+    margin-left: -8px;
+    color: white; }
+    @media (min-width: 56.25em) {
+      .nav--top:after {
+        content: normal;
+        content: none; } }
+  .nav--top a, .nav--top a:visited {
+    color: white;
+    display: block;
+    padding-left: 14px;
+    line-height: 44px;
+    background-image: none;
+    line-height: 3;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-size: 0.875rem;
+    border-bottom: 1px solid #27090d;
+    border-top: 1px solid #5d1520;
+    background-color: #481019;
+    text-shadow: 1px 1px 1px #5d1520;
+    -webkit-transition: background 0.3s ease;
+    -moz-transition: background 0.3s ease;
+    -ms-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
+    transition: background 0.3s ease; }
+    .nav--top a:hover, .nav--top a:visited:hover {
+      text-decoration: none;
+      background-color: #1e070b; }
+    @media (min-width: 56.25em) {
+      .nav--top a, .nav--top a:visited {
+        padding: 0 12px;
+        text-align: center;
+        line-height: 3;
+        font-size: 14px;
+        font-size: 0.875rem;
+        text-shadow: none;
+        font-weight: bold; } }
+
+.nav--top__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 52.8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #481019;
+  -webkit-box-shadow: inset -100px -50px 100px 100px rgba(0, 0, 0, 0.2);
+  box-shadow: inset -100px -50px 100px 100px rgba(0, 0, 0, 0.2);
+  /*
+       * Usamos VW porque con % tomaría el tamaño del contenedor,
+       * que es $nav-width (unos 48px) y no se ve na' e ná
+       */
+  width: 99vw;
+  z-index: -1;
+  height: 100vh; }
+  @media (min-width: 56.25em) {
+    .nav--top__list {
+      height: auto;
+      padding: 0;
+      position: static;
+      display: table;
+      background: none;
+      text-align: left;
+      z-index: 100;
+      border-radius: 0;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 80%;
+      width: 100%; } }
+  .nav--top__list li {
+    background-color: #ff944d;
+    /*
+     * Con estos dos nth-of-type seleccionamos los últimos dos DIV del menú
+     * y los bajamos como si fueran un "menú inferior", PERO NO! son el mismo menú!
+    */ }
+    .nav--top__list li:nth-last-of-type(1) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50%;
+      text-align: center;
+      border-left: 1px solid #27090d; }
+      .nav--top__list li:nth-last-of-type(1) a {
+        padding: 0;
+        background-color: #ff944d; }
+      @media (min-width: 56.25em) {
+        .nav--top__list li:nth-last-of-type(1) {
+          position: static;
+          bottom: auto;
+          right: auto;
+          width: auto;
+          border-left: none; } }
+    .nav--top__list li:nth-last-of-type(2) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50%;
+      text-align: center;
+      border-right: 1px solid #5d1520; }
+      .nav--top__list li:nth-last-of-type(2) a {
+        padding: 0; }
+      @media (min-width: 56.25em) {
+        .nav--top__list li:nth-last-of-type(2) {
+          position: static;
+          bottom: auto;
+          right: auto;
+          width: auto;
+          border-left: none; } }
+    @media (min-width: 56.25em) {
+      .nav--top__list li {
+        display: table-cell;
+        background-color: transparent;
+        margin-right: 0;
+        padding: 0;
+        width: 25%; } }
+
+/*
+ * Ya que no le doy soporte a IE9 vamos a hacer el toggle con CSS3 y el hack
+ * del checkbox : http://codepen.io/Wakkos/pen/xAhdq
+ */
+.checkbox__hack {
+  display: none;
+  /*
+   * Quitamos el overflow:hidden para que se muestre el menú
+   * Eso es todo, un overflow. Con eso mostramos u ocultamos el menú.
+   * (Eso y el content del after para que sea una X y no la hamburguesa)
+   */ }
+  .checkbox__hack:checked ~ .nav--top {
+    overflow: visible; }
+    .checkbox__hack:checked ~ .nav--top::after {
+      content: "x"; }
+
+.checkbox-hack__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 52.8px;
+  color: white;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 0;
+  z-index: 100; }
+
 /*------------------------------------*\
     $HOME
 \*------------------------------------*/
@@ -1420,36 +974,34 @@ body {
   font-weight: normal;
   font-size: 14px;
   font-size: 0.875rem;
-  padding: 4.5em 96px 0 12px;
+  padding: 4.5em 12px 0 12px;
   width: 100%;
   color: #481019;
-  text-shadow: 1px 1px 1px white;
   background-image: url("img/wakkos.jpg");
   background-repeat: no-repeat;
-  background-position: right 3em;
+  background-position: right 0;
   background-size: 40%; }
-  @media (min-width: 37.5em) {
+  @media (min-width: 56.25em) {
     .home-intro {
       display: table-cell;
       width: 90%;
       vertical-align: middle;
       border-bottom: none;
       background-color: transparent;
-      -webkit-box-shadow: none;
-      box-shadow: none;
       padding: 0 0.75em 0 3em;
       font-size: 20px;
       font-size: 1.25rem; } }
-  .home-intro a, .home-intro a:visited {
-    color: #ff944d; }
-  .home-intro h1 {
+  .home-intro .home-header {
     font-family: 'Oswald', sans-serif;
     font-size: 22px;
-    font-size: 1.375rem; }
+    font-size: 1.375rem;
+    padding-right: 96px; }
 
 .actions {
   background-color: #e8dfcc;
-  padding: 0.75em 12px; }
+  padding: 0.75em 12px;
+  -webkit-box-shadow: 0 -1px 1px #d9c9a8;
+  box-shadow: 0 -1px 1px #d9c9a8; }
 
 .actions__text {
   font-size: 16px;
@@ -1461,123 +1013,37 @@ body {
   line-height: 1.2; }
 
 /*------------------------------------*\
-    $SIDEBAR / ASIDE
-\*------------------------------------*/
-aside {
-  background: #f0eadd;
-  padding: 1.5em 12px 3em; }
-  @media (min-width: 37.5em) {
-    aside {
-      display: table-cell;
-      width: 32%; } }
-
-.stimpy {
-  background-color: #f8f5ef;
-  border: 0px solid #481019;
-  border-radius: 1em;
-  padding: 1.5em 12px;
-  position: relative; }
-  .stimpy::after {
-    content: "";
-    position: absolute;
-    width: 73px;
-    height: 52px;
-    background-image: url("img/stimpy.png");
-    right: 0;
-    bottom: -53px; }
-  .stimpy::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    right: 80px;
-    bottom: -32px;
-    border: 16px solid;
-    border-color: #f8f5ef #f8f5ef transparent transparent; }
-
-/*------------------------------------*\
-    $FOOTER
-\*------------------------------------*/
-/* 
- * Tarjeteamos directamente al footer, eso no se hace peeeeero no creo
- * que usemos footers diferentes en esta web. Así que paso de clases =P
- */
-footer {
-  background-color: #481019;
-  border-top: 5px solid #ff751a;
-  color: white;
-  padding: 1.5em 24px;
-  font-size: 14px;
-  font-size: 0.875rem; }
-  footer a, footer a:visited {
-    background: none; }
-  @media (min-width: 37.5em) {
-    footer {
-      -webkit-column-width: 33.3333%;
-      -webkit-column-count: 3;
-      -webkit-column-gap: 50px;
-      -webkit-column-rule-color: #e17687;
-      -webkit-column-rule-style: solid;
-      -webkit-column-rule-width: 1px;
-      -moz-column-width: 33.3333%;
-      -moz-column-count: 3;
-      -moz-column-gap: 50px;
-      -moz-column-rule-color: #e17687;
-      -moz-column-rule-style: solid;
-      -moz-column-rule-width: 1px;
-      column-width: 33.3333%;
-      column-count: 3;
-      column-gap: 50px;
-      column-rule-color: #e17687;
-      column-rule-style: solid;
-      column-rule-width: 1px; } }
-
-.footer__logo {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100px;
-  width: 100%;
-  margin-bottom: 1.5em; }
-  @media (min-width: 37.5em) {
-    .footer__logo {
-      -webkit-column-span: all;
-      -moz-column-span: all;
-      -ms-column-span: all;
-      -o-column-span: all;
-      column-span: all; } }
-
-/*------------------------------------*\
     $BLOG
 \*------------------------------------*/
-.blog--twocols {
+.home-content {
   width: 100%; }
-  @media (min-width: 37.5em) {
-    .blog--twocols {
+  @media (min-width: 56.25em) {
+    .home-content {
       display: table; } }
-  @media (min-width: 48em) {
-    .blog--twocols {
+  @media (min-width: 56.25em) {
+    .home-content {
       margin-left: auto;
       margin-right: auto;
-      max-width: 1024px;
+      max-width: 80%;
       width: 100%;
       -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
       box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1); } }
 
-.blog--twocols__container {
+.home-content__main {
   padding-bottom: 1.5em; }
-  @media (min-width: 37.5em) {
-    .blog--twocols__container {
+  @media (min-width: 56.25em) {
+    .home-content__main {
       display: table-cell;
       vertical-align: top; } }
-  @media (min-width: 48em) {
-    .blog--twocols__container {
+  @media (min-width: 56.25em) {
+    .home-content__main {
       background-color: white; } }
 
-.blog--twocols__item {
+.main__item {
   position: relative;
   padding: 1.5em 0 0 24px;
   margin-left: 12px; }
-  .blog--twocols__item::before {
+  .main__item::before {
     content: "";
     position: absolute;
     top: 1.3em;
@@ -1595,12 +1061,255 @@ footer {
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; }
-  .blog--twocols__item:last-child {
+  .main__item:last-child {
     margin-bottom: 24px; }
 
 /* Los Iconos del article */
 .blog::before {
   content: "\f086"; }
+
+/**
+* Abstracciones y objetos
+**/
+/*------------------------------------*\
+    $BOTONES
+\*------------------------------------*/
+/*
+ * Definimos los botones y sus variantes
+ */
+/**
+* .btn es la clase principal para definir un botón
+*/
+.btn, .btn:link {
+  display: inline-block;
+  line-height: 2.25em;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 100%;
+  white-space: nowrap;
+  background-color: #481019;
+  border: none;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  cursor: pointer;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 1em;
+  padding-left: 1em;
+  border-radius: 2px;
+  	/**
+   	* Nadie quiere un botón con texto subrayado cuando
+   	* hacemos hover.
+   	*/ }
+  .btn:hover, .btn:link:hover {
+    text-decoration: none; }
+  .btn:active, .btn:focus, .btn:link:active, .btn:link:focus {
+    outline: none; }
+  .btn:visited, .btn:link:visited {
+    color: white; }
+
+/*------------------------------------*\
+    $BOTONES-VARIANTES
+\*------------------------------------*/
+/**
+ * Variantes de los botones: color para dar sensaciones.
+ *
+ */
+/**
+* Inputs con estilo de botones
+*/
+input[type="submit"].btn:hover {
+  border-color: #1e070b; }
+
+/**
+* Botón no disponible
+*/
+.btn--disabled {
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+  cursor: default; }
+
+/**
+* Botón de Error
+*/
+.btn--error {
+  background-color: #da4f49;
+  color: #48110f; }
+  .btn--error:hover {
+    color: #fcf3f3; }
+  .btn--error:visited {
+    color: #48110f; }
+
+/**
+* Botón de Info
+*/
+.btn--info {
+  background-color: #a5dddf;
+  color: #308588; }
+  .btn--info:hover {
+    color: white; }
+  .btn--info:visited {
+    color: #308588; }
+
+/**
+* Botón principal
+*/
+.btn--primary {
+  background-color: #ff944d;
+  color: white; }
+  .btn--primary:hover {
+    color: white; }
+  .btn--primary:visited {
+    color: white; }
+
+/**
+* Botón de OK
+*/
+.btn--success {
+  background-color: #5bb75b;
+  color: #153115; }
+  .btn--success:hover {
+    color: #e9f5e9; }
+  .btn--success:visited {
+    color: #153115; }
+
+/**
+* Botón de advertencia
+*/
+.btn--warning {
+  background-color: #da4f49;
+  color: #48110f; }
+  .btn--warning:hover {
+    color: #fcf3f3; }
+  .btn--warning:visited {
+    color: #48110f; }
+
+.btn.btn--call {
+  width: 49%;
+  font-size: 18px;
+  font-size: 1.125rem; }
+
+.btn--inactive,
+.btn--inactive:hover,
+.btn--inactive:active,
+.btn--inactive:focus {
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+  cursor: default; }
+
+/*------------------------------------*\
+    $BOTONES-TAMAÑOS
+\*------------------------------------*/
+/**
+ * Variantes de los botones por tamaño.
+ *
+ */
+.btn--mini {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  line-height: 1.5; }
+
+.btn--small {
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  line-height: 2; }
+
+.btn--large {
+  padding-right: 3em;
+  padding-left: 3em;
+  line-height: 3; }
+
+/*------------------------------------*\
+    $BOTONES-GRUPOS
+\*------------------------------------*/
+/**
+ * Con esta clase podemos agrupar los botones
+ * en grupos horizontales.
+ *
+ */
+.btn--group {
+  position: relative;
+  *margin-left: .3em; }
+
+.btn--group .btn {
+  position: relative;
+  border-radius: 0;
+  float: left;
+  margin-left: -1px; }
+
+.btn--group .btn:first-child {
+  margin-left: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 2px;
+  -webkit-border-top-left-radius: 2px;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 2px;
+  -moz-border-radius-topleft: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+
+.btn--group .btn:last-child {
+  -webkit-border-top-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 2px;
+  -moz-border-radius-bottomright: 2px;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+
+.btn--group .btn.large:first-child {
+  margin-left: 0;
+  -webkit-border-top-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 2px;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 2px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 2px;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+
+.btn--group .btn.large:last-child {
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 2px;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 2px;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 2px;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
 
 /*------------------------------------*\
     $TEXTURAS
@@ -1614,7 +1323,7 @@ footer {
   font-size: 14px;
   font-size: 0.875rem;
   color: #904809;
-  border-radius: 4px; }
+  border-radius: 2px; }
   .alert .alert--heading {
     color: inherit; }
   .alert .close {
@@ -1672,7 +1381,7 @@ footer {
   font-size: 0.75rem;
   font-weight: bold;
   white-space: nowrap;
-  border-radius: 4px;
+  border-radius: 2px;
   color: #262626;
   background-color: #ff944d;
   -webkit-transition: background-color 0.25s 0 linear;
@@ -1716,7 +1425,7 @@ footer {
 .well {
   min-height: 21px;
   padding: 11px;
-  border-radius: 4px;
+  border-radius: 2px;
   margin-bottom: 1.5em;
   background-color: white;
   border: 1px solid #ffc299;
@@ -1740,16 +1449,5 @@ footer {
   background-color: white;
   color: #ff944d;
   text-shadow: none; }
-
-/*------------------------------------*\
-    $BREAKPOINTS
-\*------------------------------------*/
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  /*------------------------------------*\
-      $2x
-  \*------------------------------------*/
-  /*
-   * Breakpoint para dispositivos retina
-   */ }
 
 /*# sourceMappingURL=style.css.map */
