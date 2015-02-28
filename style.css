@@ -1016,7 +1016,8 @@ body {
     $BLOG
 \*------------------------------------*/
 .home-content {
-  width: 100%; }
+  width: 100%;
+  padding: 24px; }
   @media (min-width: 56.25em) {
     .home-content {
       display: table; } }
@@ -1067,6 +1068,41 @@ body {
 /* Los Iconos del article */
 .blog::before {
   content: "\f086"; }
+
+/*------------------------------------*\
+    $SIDEBAR / ASIDE
+\*------------------------------------*/
+.aside {
+  background: #f0eadd;
+  padding: 1.5em 12px 3em; }
+  @media (min-width: 56.25em) {
+    .aside {
+      display: table-cell;
+      width: 32%; } }
+
+.stimpy {
+  background-color: #f8f5ef;
+  border: 0px solid #481019;
+  border-radius: 1em;
+  padding: 1.5em 12px;
+  position: relative; }
+  .stimpy::after {
+    content: "";
+    position: absolute;
+    width: 73px;
+    height: 52px;
+    background-image: url("img/stimpy.png");
+    right: 0;
+    bottom: -53px; }
+  .stimpy::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 80px;
+    bottom: -32px;
+    border: 16px solid;
+    border-color: #f8f5ef #f8f5ef transparent transparent; }
 
 /**
 * Abstracciones y objetos

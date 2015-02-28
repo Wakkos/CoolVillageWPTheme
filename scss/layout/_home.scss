@@ -59,6 +59,7 @@
 
 .home-content {
 	width: 100%;
+	padding: $gutterwidth;
 	@include respond-to("medium") {
 		display: table;
 

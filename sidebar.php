@@ -1,4 +1,4 @@
-<aside>
+<aside class="aside">
     <div class="stimpy">
         <div class="stimpy__text">
             <?php dynamic_sidebar( 'Stimpy' ); ?>

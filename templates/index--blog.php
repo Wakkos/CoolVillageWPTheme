@@ -2,7 +2,9 @@
 <main class="home-content">
     <section role="main" class="home-content__main">
     <!-- La navegación del blog -->
-    
+        <header>
+            <h3>Artículos:</h3>
+        </header>
         <?php rewind_posts(); ?>
         <?php query_posts( "category_name=blog,tweet&posts_per_page=8" ) ?>
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
