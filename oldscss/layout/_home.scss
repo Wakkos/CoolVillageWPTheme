@@ -10,7 +10,7 @@
 .home-intro {
 	font-weight:normal;
 	@include font-size(14);
-	padding:($baseline * 3) ($gutterwidth / 2) 0 ($gutterwidth / 2);
+	padding:($baseline / 2) ($gutterwidth / 2) 0 ($gutterwidth / 2);
 	width: 100%;
 	color: $secondary;
 	background-image:url("#{$image-dir}/wakkos.jpg");
