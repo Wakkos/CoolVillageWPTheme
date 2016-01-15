@@ -70,7 +70,9 @@
 <body>
 
  <!-- La navegación interna, superior. -->
+ <header class="header" role="banner">
 <?php include( TEMPLATEPATH . '/templates/role__navigation--top.php' ); ?>
 
 <!-- El Encabezado (Logo) -->
 <?php include( TEMPLATEPATH . '/templates/role__banner--home.php' ); ?>
+</header>

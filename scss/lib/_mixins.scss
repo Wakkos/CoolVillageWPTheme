@@ -38,14 +38,6 @@
   }
 }
 
-/*
-* Esto deberíamos eliminarlo ya, no? El primer Commit gana!
-*/
-@mixin font-size($font-size: 16){
-    font-size:($font-size)*1px;
-    font-size:($font-size / $basefontsize)*1rem;
-}
-
   /**
   * Centrar y dar un ancho máximo igual a $pagemaxwidth.
   */
@@ -276,16 +268,4 @@
         -ms-#{$property}:$value;
          -o-#{$property}:$value;
             #{$property}:$value;
-}
-
-/*
- * Función para controlar el index
- */
-
-@function z($layer) {
-  @if not map-has-key($z-layers, $layer) {
-    @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
-  }
-
-  @return map-get($z-layers, $layer);
 }

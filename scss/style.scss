@@ -15,6 +15,7 @@
 **/
 @import "lib/settings.scss";
 @import "lib/mixins.scss";
+@import "lib/funciones.scss";
 @import "lib/flex.scss";
 @import "lib/placeholders.scss";
 
@@ -35,14 +36,13 @@
 @import "elementos/imagenes.scss";
 @import "elementos/links.scss";
 @import "elementos/tipografia.scss";
+@import "elementos/tablas.scss";
 
 /**
 * Layout del sitio
 **/
 @import "layout/sitio.scss";
 @import "layout/navegacion.scss";
-@import "layout/home.scss";
-@import "layout/aside.scss";
 
 /**
 * Abstracciones y objetos
@@ -51,7 +51,7 @@
 @import "abstracciones/fonticon.scss";
 @import "abstracciones/grid.scss";
 @import "abstracciones/paginacion.scss";
-@import "abstracciones/tablas.scss";
 @import "abstracciones/texturas.scss";
+@import "abstracciones/abstracciones.scss";
 
 
