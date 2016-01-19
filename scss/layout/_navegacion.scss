@@ -59,7 +59,7 @@
         position: relative;
         top: auto;
         right: auto;
-        width: 100%;
+        width: auto;
         height: auto;
         cursor: auto;
         &:after {
@@ -89,7 +89,7 @@
         */
         width: 100vw;
         @include respond-to(medium) {
-            padding-top: 0;
+            padding: 0;
             position: relative;
             top: auto;
             left: auto;
@@ -97,9 +97,9 @@
             height: auto;
             box-shadow: none;
             margin-bottom: $gutterwidth;
+            background-color: transparent;
         }
-      }
-        .nav__item {
+        li {
             line-height: 2;
             border-bottom: 1px solid $bordercolor;
             text-transform: capitalize;
@@ -111,11 +111,11 @@
             @include respond-to(medium) {
                 display: inline-block;
                 border-bottom: none;
-                border-right: 1px solid $bordercolor;
-                text-align: center;
-                padding: 0 $gutterwidth;
+                padding: 0 0 0 $gutterwidth;
             }
         }
+    }
+
 // Ocultamos el checkbox
      .checkbox__hack {
         display: none;
@@ -135,8 +135,8 @@
                 content:"x";
               }
             }
-         }
-     }
+        }
+    }
 
 
  // Estilizamos el label para que aparezca JUSTO encima de la navegación

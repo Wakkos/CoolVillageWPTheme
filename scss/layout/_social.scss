@@ -1,0 +1,53 @@
+
+
+
+
+
+/*------------------------------------*\
+    $SOCIAL
+\*------------------------------------*/
+
+.social {
+    margin: 0;
+    padding: $gutterwidth 0;
+    list-style-type: none;
+    text-align: center;
+    background-color: $lightergrey;
+    box-shadow: inset 0 -1px 2px 2px $lightgrey;
+}
+    .social__item {
+        display: inline-block;
+        padding: 0 $gutterwidth;
+    }
+
+    .social__icon, .social__icon:visited {
+        font-size: fs(big);
+
+        &:before {
+            line-height: 2em;
+            color: $white;
+            width: 2em;
+            border-radius: 100%;
+            box-shadow: 0 0 0 3px $white;
+        }
+    }
+        .social__text {
+            position: absolute;
+            clip: rect(1px, 1px, 1px, 1px);
+        }
+        .icon-linkedin:before {
+            display: inline-block;
+            background-color: $linkedin;
+        }
+        .icon-twitter:before {
+            display: inline-block;
+            background-color: $tw;
+        }
+        .icon-codepen:before {
+            display: inline-block;
+            background-color: $black;
+        }
+        .icon-github:before {
+            display: inline-block;
+            background-color: $black;
+        }

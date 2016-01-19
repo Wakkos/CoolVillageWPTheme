@@ -1,0 +1,79 @@
+
+
+
+
+
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+
+// Our DIV with the BG
+.bg {
+	background-image:url(#{$image-dir}/superwakkos.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	@extend %clearfix;
+	@include respond-to(medium) {
+		padding-top: $gutterwidth;
+	}
+}
+
+
+// Top bar with Nav and Logo
+.top {
+	color: $white;
+	@include respond-to(medium) {
+		@include flexbox;
+		@include justify-content(flex-end);
+		@include max-width;
+		margin-bottom: $gutterwidth * 3;
+	}
+	a, a:visited {
+		color: $white;
+	}
+}
+
+	.logo {
+		max-width: 65px;
+		margin-right: auto;
+		img {
+			border-left: 3px solid $lightgrey;
+			border-top: 3px solid $lightgrey;
+			border-bottom: 3px solid $lightergrey;
+			border-right: 3px solid $lightergrey;
+			border-radius: $radius;
+		}
+	}
+
+// The claim area: h1 and buttons
+.claims {
+	@include max-width;
+	display: table;
+	margin-bottom: $gutterwidth * 3;
+}
+	.header {
+		@include respond-to(medium) {
+			display: table-cell;
+			width: 85%;
+			padding: 0 $gutterwidth 0 0;
+		}
+	}
+		.header__title {
+			font-size: fs(huge);
+			padding-right: ($gutterwidth * 4);
+			color: $white;
+			margin-bottom: $gutterwidth;
+			small {
+				display: block;
+				font-size: fs(normal);
+				color: $lightgrey;
+			}
+		}
+		.header__text {
+			@include max-width;
+			color: $white;
+		}
+	.cta {
+		display: table-cell;
+		width: 15%;
+	}

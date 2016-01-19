@@ -30,7 +30,7 @@
 
 html {
 	background : $background;
-	font-size : 87.5%;
+	font-size : 100%;
 	-webkit-overflow-scrolling : touch;
 	-webkit-tap-highlight-color : transparent;
 	-webkit-text-size-adjust : 100%;
@@ -52,3 +52,27 @@ body {
 * y detalles que forman tu web. Disfruta!
 */
 
+
+.home-content {
+	@include max-width;
+	@include respond-to(medium) {
+		display: table;
+	}
+}
+	.home-content__section {
+		@include respond-to(medium) {
+			display: table-cell;
+			width: 74%;
+		}
+	}
+		.home-content__article {
+			margin-bottom: $baselineheight;
+		}
+
+
+	.aside {
+		@include respond-to(medium) {
+			display: table-cell;
+			width: 26%;
+		}
+	}

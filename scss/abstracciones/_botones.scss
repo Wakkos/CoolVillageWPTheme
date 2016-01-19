@@ -170,7 +170,10 @@ input[type="submit"].btn:hover {
 }
 
 
-
+.btn--block {
+    display: block;
+    margin-bottom: $baselineheight;
+}
 
 
 /*------------------------------------*\

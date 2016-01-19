@@ -17,7 +17,7 @@ $incluir-paginacion:    false!default;
 $incluir-tablas:        true!default;
 $incluir-texturas:      true!default;
 $incluir-flexbox:       true!default;
-$incluir-fonticon:      false!default;
+$incluir-fonticon:      true!default;
 $incluir-abstracciones: true!default;
 
 $incluir-imgclass:      false!default;
@@ -86,7 +86,7 @@ $z-layers: (
 /**
  * Con agregar esta variable a las imágenes declaradas en CSS apañamos:
  */
-$image-dir: "../img";
+$image-dir: "img";
 
  //Use: background-image:url("#{$image-dir}/btn.jpg");
 
@@ -94,7 +94,7 @@ $image-dir: "../img";
   * Igual para las fuentes
   */
 
-$font-dir: "../fonts";
+$font-dir: "fonts";
 /*
  *   src:url('#{$font-dir}/icomoon.eot');
  *   src:url('#{$font-dir}/icomoon.eot?#iefix') format('embedded-opentype'),
@@ -113,7 +113,7 @@ $font-dir: "../fonts";
 /**
  * Definimos elementos constantes del layout
  */
-$baselineheight :     1em;
+$baselineheight :     1.5em;
 $baseline :           $baselineheight;
 $gutterwidth :        24px;
 $pagemaxwidth :       860px;
@@ -142,10 +142,10 @@ $grid-size: 3;
  * $altfont para textos alternativos, como citas, intro, etc...
  * $codefont para código
  */
-$basefont : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$basefont : "Open Sans", sans-serif;
 $altfont : Georgia, Times, "Times New Roman";
 $codefont : "Courier New", monospace;
-$baseheadingfont : $altfont;
+$baseheadingfont : 'Oswald', sans-serif;
 
 $baseheadingfontweight : normal;
 $baseheadingfontcolor : inherit;
@@ -196,7 +196,7 @@ $size-vars: (
 /**
  * Brand stuff
  */
-$basecolor      : rgb(187, 34, 153);
+$basecolor      : rgb(225,20,35);
 $basecolor-light: lighten($basecolor, 25%);
 $secondary      : rgb(219,216,121); // Rojo CoolVillage
 $bordercolor    : lighten($secondary, 20); // Verde Bordes
@@ -215,7 +215,7 @@ $lightergrey 	: lighten($black, 90%);
 $white 			: rgb(255,255,255);
 
 // Web
-$background: 		$lightergrey;
+$background: 		$white;
 $textcolor: 		#494949;
 $textcolor-strong:	$black;
 

@@ -62,17 +62,32 @@
 <meta name="msapplication-TileColor" content="#000">
 <meta http-equiv="cleartype" content="on">
 
-
-<link href='http://fonts.googleapis.com/css?family=Alegreya:400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
-
+<link href='https://fonts.googleapis.com/css?family=Oswald|Open+Sans:300,600' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
- <!-- La navegación interna, superior. -->
- <header class="header" role="banner">
-<?php include( TEMPLATEPATH . '/templates/role__navigation--top.php' ); ?>
+ <!-- La navegación. -->
+ <div class="bg">
+     <div class="top">
+         <div class="logo">
+            <img src="https://pbs.twimg.com/profile_images/586077262543507456/4XEvbYXj_400x400.jpg" alt="frontend, profesor y tutor de arquitectura CSS y Responsive Designs">
+         </div>
+        <?php include( TEMPLATEPATH . '/templates/role__navigation--top.php' ); ?>
+    </div>
+    <!-- El Claim -->
+    <div class="claims">
+        <header class="header" role="banner">
+            <h1 class="header__title">CoolVillage es la web de Daniel Martínez (<a href="https://twitter.com/Wakkos">@Wakkos</a>) <small>consultor,
+            profesor y tutor de arquitectura frontend, CSS y Responsive Designs. </small></h1>
+            <p class="header__text">Trabajo junto a equipos en grandes proyectos enfocándome en escalabilidad, mantenibilidad y optimizacion del <strong>frontend</strong>. Normalmente me uno a ellos en los sprints iniciales para organizar la arquitectura y el flujo de trabajo para que, al acabar, el proyecto y su equipo sea auto suficiente.</p>
+        </header>
+        <div class="cta">
+            <a href="" class="btn--info btn--block">Próximo curso</a>
+            <a href="" class="btn--success btn--block">Contratar</a>
+        </div>
+    </div>
+</div>
 
-<!-- El Encabezado (Logo) -->
-<?php include( TEMPLATEPATH . '/templates/role__banner--home.php' ); ?>
-</header>
+
+    <?php include( TEMPLATEPATH . '/templates/social-icons.php' ); ?>
+
