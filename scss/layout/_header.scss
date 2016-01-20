@@ -65,8 +65,10 @@
 			margin-bottom: $gutterwidth;
 			small {
 				display: block;
-				font-size: fs(normal);
-				color: $lightgrey;
+				font-size: fs(big);
+
+				color: $white;
+				font-family: $basefont;
 			}
 		}
 		.header__text {

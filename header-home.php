@@ -77,8 +77,7 @@
     <!-- El Claim -->
     <div class="claims">
         <header class="header" role="banner">
-            <h1 class="header__title">CoolVillage es la web de Daniel Martínez (<a href="https://twitter.com/Wakkos">@Wakkos</a>) <small>consultor,
-            profesor y tutor de arquitectura frontend, CSS y Responsive Designs. </small></h1>
+            <h1 class="header__title">CoolVillage es la web de Daniel Martínez (<a href="https://twitter.com/Wakkos">@Wakkos</a>) <small>Frontend, profesor y tutor de arquitectura CSS y Responsive Design. </small></h1>
             <p class="header__text">Trabajo junto a equipos en grandes proyectos enfocándome en escalabilidad, mantenibilidad y optimizacion del <strong>frontend</strong>. Normalmente me uno a ellos en los sprints iniciales para organizar la arquitectura y el flujo de trabajo para que, al acabar, el proyecto y su equipo sea auto suficiente.</p>
         </header>
         <div class="cta">

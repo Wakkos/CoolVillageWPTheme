@@ -196,9 +196,9 @@ $size-vars: (
 /**
  * Brand stuff
  */
-$basecolor      : rgb(225,20,35);
+$basecolor      : rgb(250,105,0);
 $basecolor-light: lighten($basecolor, 25%);
-$secondary      : rgb(219,216,121); // Rojo CoolVillage
+$secondary      : rgb(167,219,216); // Rojo CoolVillage
 $bordercolor    : lighten($secondary, 20); // Verde Bordes
 $compcolor      : rgb(216,240,227); //
 

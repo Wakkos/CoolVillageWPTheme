@@ -57,20 +57,26 @@ body {
 	@include max-width;
 	@include respond-to(medium) {
 		display: table;
+		padding-top: $gutterwidth;
 	}
 }
 	.home-content__section {
 		@include respond-to(medium) {
 			display: table-cell;
 			width: 74%;
+			padding-right: $gutterwidth;
 		}
 	}
 		.home-content__article {
 			margin-bottom: $baselineheight;
+			border-bottom: 1px solid $lightergrey;
 		}
 
 
 	.aside {
+		background-color: $lightergrey;
+		border-radius: $radius;
+		padding: 0 ($gutterwidth / 2);
 		@include respond-to(medium) {
 			display: table-cell;
 			width: 26%;
