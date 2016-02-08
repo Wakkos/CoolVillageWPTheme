@@ -29,7 +29,6 @@
     border-bottom: ($buttonborderwidth * 2) $buttonborderstyle $buttonbordercolor;
     border-left: $buttonborderwidth $buttonborderstyle $buttonbordercolor;
 	cursor: pointer;
-	margin:0;
 	padding-top:   0;
    	padding-bottom:0;
    	padding-right:1em;
@@ -91,12 +90,17 @@ input[type="submit"].btn:hover {
 */
 .btn--info {
     @extend %btn;
-    color: $color-info;
+    color: white;
+    background-color: $color-info;
+    border-top: $buttonborderwidth $buttonborderstyle darken($color-info, 30);
+    border-right: $buttonborderwidth $buttonborderstyle darken($color-info, 30);
+    border-bottom: ($buttonborderwidth * 2) $buttonborderstyle darken($color-info, 30);
+    border-left: $buttonborderwidth $buttonborderstyle darken($color-info, 30);
     &:hover {
-        color: $color-info;
+        color: white;
     }
     &:visited {
-        color: $color-info;
+        color: white;
     }
 }
 
@@ -143,12 +147,13 @@ input[type="submit"].btn:hover {
 
 .btn--success {
     @extend %btn;
-    color: $color-success;
+    color: darken($color-success, 30);
+    background-color: lighten($color-success, 30);
     &:hover {
-        color: $color-success;
+        color: darken($color-success, 30);
     }
     &:visited {
-        color: $color-success;
+        color: darken($color-success, 30);
     }
 }
 
@@ -160,21 +165,20 @@ input[type="submit"].btn:hover {
 
 .btn--primary {
     @extend %btn;
-	color: $basecolor;
+	color: $white;
+    background-color: $basecolor;
+    border-top: $buttonborderwidth $buttonborderstyle darken($basecolor, 30);
+    border-right: $buttonborderwidth $buttonborderstyle darken($basecolor, 30);
+    border-bottom: ($buttonborderwidth * 2) $buttonborderstyle darken($basecolor, 30);
+    border-left: $buttonborderwidth $buttonborderstyle darken($basecolor, 30);
 	&:hover {
-		color: $basecolor;
+		color: $white;
+        background-color: $basecolor;
 	}
 	&:visited {
-		color: $basecolor;
+		color: $white;
 	}
 }
-
-
-.btn--block {
-    display: block;
-    margin-bottom: $baselineheight;
-}
-
 
 /*------------------------------------*\
     $BOTONES-TAMAÑOS

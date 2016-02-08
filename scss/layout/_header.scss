@@ -17,15 +17,32 @@
 		padding-top: $gutterwidth;
 	}
 }
+	.bg--small {
+		background-color: $secondary;
+		padding: ($gutterwidth / 2) 0;
+		background-image: none;
+		.top {
+			margin-bottom: 0;
+		}
+		.logo {
+			max-width: 35px;
+		}
+		.nav__list {
+			margin-bottom: 0;
+		}
+		@include respond-to(medium) {
+			margin-bottom: $gutterwidth * 2;
+		}
+	}
 
 
 // Top bar with Nav and Logo
 .top {
 	color: $white;
+	@include max-width;
 	@include respond-to(medium) {
 		@include flexbox;
 		@include justify-content(flex-end);
-		@include max-width;
 		margin-bottom: $gutterwidth * 3;
 	}
 	a, a:visited {
@@ -37,10 +54,6 @@
 		max-width: 65px;
 		margin-right: auto;
 		img {
-			border-left: 3px solid $lightgrey;
-			border-top: 3px solid $lightgrey;
-			border-bottom: 3px solid $lightergrey;
-			border-right: 3px solid $lightergrey;
 			border-radius: $radius;
 		}
 	}
@@ -48,8 +61,10 @@
 // The claim area: h1 and buttons
 .claims {
 	@include max-width;
-	display: table;
 	margin-bottom: $gutterwidth * 3;
+	@include respond-to(medium) {
+		display: table;
+	}
 }
 	.header {
 		@include respond-to(medium) {
@@ -78,4 +93,25 @@
 	.cta {
 		display: table-cell;
 		width: 15%;
+		text-align: center;
 	}
+		.btn--cta--curso {
+			@extend .btn--primary;
+			display: block;
+    		margin-bottom: $baselineheight;
+    		max-width: 200px;
+    		width: 49%;
+    		@include respond-to(medium) {
+    			width: 100%;
+    		}
+		}
+		.btn--cta--hire {
+			@extend .btn--info;
+			display: block;
+    		margin-bottom: $baselineheight;
+    		max-width: 200px;
+    		width: 49%;
+    		@include respond-to(medium) {
+    			width: 100%;
+    		}
+		}

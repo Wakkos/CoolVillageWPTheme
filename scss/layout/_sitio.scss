@@ -58,6 +58,7 @@ body {
 	@include respond-to(medium) {
 		display: table;
 		padding-top: $gutterwidth;
+		margin-bottom: $gutterwidth;
 	}
 }
 	.home-content__section {
@@ -71,6 +72,10 @@ body {
 			margin-bottom: $baselineheight;
 			border-bottom: 1px solid $lightergrey;
 		}
+
+.article-content {
+	@include max-width;
+}
 
 
 	.aside {

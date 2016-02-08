@@ -1,0 +1,43 @@
+
+
+
+
+
+/*------------------------------------*\
+    $COMMENTS
+\*------------------------------------*/
+.comments {
+    @include max-width;
+    input, textarea {
+        display: block;
+        max-width: 300px;
+    }
+    h6 {
+        margin-bottom: 1em;
+    }
+}
+
+.commentlist {
+    list-style-type: none;
+    border-left: 1px solid $lightgrey;
+}
+    .comment-body {
+        list-style-type: none;
+        margin-bottom: $gutterwidth * 2;
+        p {
+            margin-bottom: .5em;
+        }
+    }
+        .comment-author {
+            display: inline-block;
+            font-weight: bold;
+            img {
+                max-width: 40px;
+                height: auto;
+            }
+        }
+        .commentmetadata {
+            display: inline-block;
+            font-size: fs(x-small);
+            margin-bottom: $gutterwidth;
+        }

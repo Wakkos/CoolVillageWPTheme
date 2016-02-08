@@ -198,7 +198,7 @@ $size-vars: (
  */
 $basecolor      : rgb(250,105,0);
 $basecolor-light: lighten($basecolor, 25%);
-$secondary      : rgb(167,219,216); // Rojo CoolVillage
+$secondary      : #1a2842; // Rojo CoolVillage
 $bordercolor    : lighten($secondary, 20); // Verde Bordes
 $compcolor      : rgb(216,240,227); //
 
@@ -301,7 +301,7 @@ $badgecolor         : $textcolor;
 // botones
 $buttonbackground   : transparent;
 $buttonbordercolor  : currentcolor;
-$buttoncolor        : $textcolor;
+$buttoncolor        : $white;
 $buttonborderwidth  : 1px;
 $buttonborderstyle  : solid;
 

@@ -584,7 +584,7 @@ li ol {
 blockquote {
   margin: 0 0 1.5em 0;
   padding-left: 24px;
-  border-left: 2px solid #eff9f8;
+  border-left: 2px solid #37548b;
   font-family: Georgia, Times, "Times New Roman";
   font-style: normal; }
   blockquote p {
@@ -622,7 +622,7 @@ dt {
   margin-left: 22.78%; }
 
 abbr[title] {
-  border-bottom: 1px dotted #eff9f8;
+  border-bottom: 1px dotted #37548b;
   cursor: help; }
 
 b, strong {
@@ -678,7 +678,7 @@ hr {
   padding: 0;
   height: 1px;
   border: 0;
-  border-top: 1px solid #eff9f8; }
+  border-top: 1px solid #37548b; }
 
 .intro {
   font-weight: bold; }
@@ -808,14 +808,18 @@ body {
 * y detalles que forman tu web. Disfruta!
 */
 .home-content {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 860px;
+  padding: 0 12px;
   width: 100%; }
   @media (min-width: 56.25em) {
     .home-content {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 860px; } }
+  @media (min-width: 56.25em) {
+    .home-content {
       display: table;
-      padding-top: 24px; } }
+      padding-top: 24px;
+      margin-bottom: 24px; } }
 
 @media (min-width: 56.25em) {
   .home-content__section {
@@ -826,6 +830,15 @@ body {
 .home-content__article {
   margin-bottom: 1.5em;
   border-bottom: 1px solid #e6e6e6; }
+
+.article-content {
+  padding: 0 12px;
+  width: 100%; }
+  @media (min-width: 56.25em) {
+    .article-content {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 860px; } }
 
 .aside {
   background-color: #e6e6e6;
@@ -926,8 +939,8 @@ body {
       background-color: transparent; } }
   .nav__list li {
     line-height: 2;
-    border-bottom: 1px solid #eff9f8;
-    text-transform: capitalize;
+    border-bottom: 1px solid #37548b;
+    text-transform: uppercase;
     text-align: right; }
     .nav__list li a {
       display: block; }
@@ -977,8 +990,29 @@ body {
     .bg {
       padding-top: 24px; } }
 
+.bg--small {
+  background-color: #1a2842;
+  padding: 12px 0;
+  background-image: none; }
+  .bg--small .top {
+    margin-bottom: 0; }
+  .bg--small .logo {
+    max-width: 35px; }
+  .bg--small .nav__list {
+    margin-bottom: 0; }
+  @media (min-width: 56.25em) {
+    .bg--small {
+      margin-bottom: 48px; } }
+
 .top {
-  color: white; }
+  color: white;
+  padding: 0 12px;
+  width: 100%; }
+  @media (min-width: 56.25em) {
+    .top {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 860px; } }
   @media (min-width: 56.25em) {
     .top {
       display: -webkit-box;
@@ -991,10 +1025,6 @@ body {
       -webkit-justify-content: flex-end;
       -moz-justify-content: flex-end;
       justify-content: flex-end;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 860px;
-      width: 100%;
       margin-bottom: 72px; } }
   .top a, .top a:visited {
     color: white; }
@@ -1003,19 +1033,20 @@ body {
   max-width: 65px;
   margin-right: auto; }
   .logo img {
-    border-left: 3px solid #bfbfbf;
-    border-top: 3px solid #bfbfbf;
-    border-bottom: 3px solid #e6e6e6;
-    border-right: 3px solid #e6e6e6;
     border-radius: 3px; }
 
 .claims {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 860px;
+  padding: 0 12px;
   width: 100%;
-  display: table;
   margin-bottom: 72px; }
+  @media (min-width: 56.25em) {
+    .claims {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 860px; } }
+  @media (min-width: 56.25em) {
+    .claims {
+      display: table; } }
 
 @media (min-width: 56.25em) {
   .header {
@@ -1035,15 +1066,37 @@ body {
     font-family: "Open Sans", sans-serif; }
 
 .header__text {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 860px;
+  padding: 0 12px;
   width: 100%;
   color: white; }
+  @media (min-width: 56.25em) {
+    .header__text {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 860px; } }
 
 .cta {
   display: table-cell;
-  width: 15%; }
+  width: 15%;
+  text-align: center; }
+
+.btn--cta--curso {
+  display: block;
+  margin-bottom: 1.5em;
+  max-width: 200px;
+  width: 49%; }
+  @media (min-width: 56.25em) {
+    .btn--cta--curso {
+      width: 100%; } }
+
+.btn--cta--hire {
+  display: block;
+  margin-bottom: 1.5em;
+  max-width: 200px;
+  width: 49%; }
+  @media (min-width: 56.25em) {
+    .btn--cta--hire {
+      width: 100%; } }
 
 /*------------------------------------*\
     $SOCIAL
@@ -1089,6 +1142,62 @@ body {
   display: inline-block;
   background-color: black; }
 
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+.footer {
+  background-color: #1a2842;
+  color: white;
+  font-size: 0.8rem;
+  padding: 24px 24px 0 24px; }
+
+.footer__logo {
+  text-align: center;
+  margin-bottom: 24px; }
+  .footer__logo img {
+    width: 70px;
+    border-radius: 100%;
+    border: 2px solid white; }
+
+/*------------------------------------*\
+    $COMMENTS
+\*------------------------------------*/
+.comments {
+  padding: 0 12px;
+  width: 100%; }
+  @media (min-width: 56.25em) {
+    .comments {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 860px; } }
+  .comments input, .comments textarea {
+    display: block;
+    max-width: 300px; }
+  .comments h6 {
+    margin-bottom: 1em; }
+
+.commentlist {
+  list-style-type: none;
+  border-left: 1px solid #bfbfbf; }
+
+.comment-body {
+  list-style-type: none;
+  margin-bottom: 48px; }
+  .comment-body p {
+    margin-bottom: .5em; }
+
+.comment-author {
+  display: inline-block;
+  font-weight: bold; }
+  .comment-author img {
+    max-width: 40px;
+    height: auto; }
+
+.commentmetadata {
+  display: inline-block;
+  font-size: 0.6rem;
+  margin-bottom: 24px; }
+
 /**
 * Abstracciones y objetos
 **/
@@ -1101,10 +1210,10 @@ body {
 /**
 * .btn es la clase principal para definir un botón
 */
-.btn--disabled, .btn--info, .btn--error, .btn--warning, .btn--success, .btn--primary {
+.btn--disabled, .btn--info, .btn--cta--hire, .btn--error, .btn--warning, .btn--success, .btn--primary, .btn--cta--curso {
   display: inline-block;
   line-height: 3em;
-  color: #494949;
+  color: white;
   text-align: center;
   vertical-align: middle;
   font-size: 1rem;
@@ -1115,7 +1224,6 @@ body {
   border-bottom: 2px solid currentcolor;
   border-left: 1px solid currentcolor;
   cursor: pointer;
-  margin: 0;
   padding-top: 0;
   padding-bottom: 0;
   padding-right: 1em;
@@ -1130,13 +1238,13 @@ body {
    	* Nadie quiere un botón con texto subrayado cuando
    	* hacemos hover.
    	*/ }
-  .btn--disabled:hover, .btn--info:hover, .btn--error:hover, .btn--warning:hover, .btn--success:hover, .btn--primary:hover {
+  .btn--disabled:hover, .btn--info:hover, .btn--cta--hire:hover, .btn--error:hover, .btn--warning:hover, .btn--success:hover, .btn--primary:hover, .btn--cta--curso:hover {
     text-decoration: none;
-    color: #494949; }
-  .btn--disabled:active, .btn--info:active, .btn--error:active, .btn--warning:active, .btn--success:active, .btn--primary:active, .btn--disabled:focus, .btn--info:focus, .btn--error:focus, .btn--warning:focus, .btn--success:focus, .btn--primary:focus {
+    color: white; }
+  .btn--disabled:active, .btn--info:active, .btn--cta--hire:active, .btn--error:active, .btn--warning:active, .btn--success:active, .btn--primary:active, .btn--cta--curso:active, .btn--disabled:focus, .btn--info:focus, .btn--cta--hire:focus, .btn--error:focus, .btn--warning:focus, .btn--success:focus, .btn--primary:focus, .btn--cta--curso:focus {
     outline: none; }
-  .btn--disabled:visited, .btn--info:visited, .btn--error:visited, .btn--warning:visited, .btn--success:visited, .btn--primary:visited {
-    color: #494949; }
+  .btn--disabled:visited, .btn--info:visited, .btn--cta--hire:visited, .btn--error:visited, .btn--warning:visited, .btn--success:visited, .btn--primary:visited, .btn--cta--curso:visited {
+    color: white; }
 
 /*------------------------------------*\
     $BOTONES-VARIANTES
@@ -1164,12 +1272,17 @@ input[type="submit"].btn:hover {
 /**
 * Botón de Info
 */
-.btn--info {
-  color: #42b8dd; }
-  .btn--info:hover {
-    color: #42b8dd; }
-  .btn--info:visited {
-    color: #42b8dd; }
+.btn--info, .btn--cta--hire {
+  color: white;
+  background-color: #42b8dd;
+  border-top: 1px solid #145b72;
+  border-right: 1px solid #145b72;
+  border-bottom: 2px solid #145b72;
+  border-left: 1px solid #145b72; }
+  .btn--info:hover, .btn--cta--hire:hover {
+    color: white; }
+  .btn--info:visited, .btn--cta--hire:visited {
+    color: white; }
 
 /**
 * Botón de Error
@@ -1195,25 +1308,28 @@ input[type="submit"].btn:hover {
 * Botón de OK
 */
 .btn--success {
-  color: #5bb75b; }
+  color: #255425;
+  background-color: #c5e6c5; }
   .btn--success:hover {
-    color: #5bb75b; }
+    color: #255425; }
   .btn--success:visited {
-    color: #5bb75b; }
+    color: #255425; }
 
 /**
 * Botón principal
 */
-.btn--primary {
-  color: #fa6900; }
-  .btn--primary:hover {
-    color: #fa6900; }
-  .btn--primary:visited {
-    color: #fa6900; }
-
-.btn--block {
-  display: block;
-  margin-bottom: 1.5em; }
+.btn--primary, .btn--cta--curso {
+  color: white;
+  background-color: #fa6900;
+  border-top: 1px solid #612900;
+  border-right: 1px solid #612900;
+  border-bottom: 2px solid #612900;
+  border-left: 1px solid #612900; }
+  .btn--primary:hover, .btn--cta--curso:hover {
+    color: white;
+    background-color: #fa6900; }
+  .btn--primary:visited, .btn--cta--curso:visited {
+    color: white; }
 
 /*------------------------------------*\
     $BOTONES-TAMAÑOS
@@ -1420,7 +1536,7 @@ input[type="submit"].btn:hover {
 .badge--icon {
   display: inline-block;
   color: #494949;
-  border: 1px solid #eff9f8;
+  border: 1px solid #37548b;
   border-radius: 3px;
   padding: 12px;
   background-color: transparent;

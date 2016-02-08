@@ -1,0 +1,24 @@
+
+
+
+
+
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+
+.footer {
+	background-color: $secondary;
+	color: $white;
+	font-size: fs(small);
+	padding: $gutterwidth $gutterwidth 0 $gutterwidth;
+}
+	.footer__logo {
+		text-align: center;
+		margin-bottom: $gutterwidth;
+		img {
+			width: 70px;
+			border-radius: 100%;
+			border: 2px solid $white;
+		}
+	}

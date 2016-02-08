@@ -67,26 +67,14 @@
 <body>
 
  <!-- La navegación. -->
- <div class="bg">
+<div class="bg bg--small">
      <div class="top">
          <div class="logo">
-            <img src="https://pbs.twimg.com/profile_images/586077262543507456/4XEvbYXj_400x400.jpg" alt="frontend, profesor y tutor de arquitectura CSS y Responsive Designs">
+            <a href="<?php bloginfo(url); ?>">
+                <img src="https://pbs.twimg.com/profile_images/586077262543507456/4XEvbYXj_400x400.jpg" alt="frontend, profesor y tutor de arquitectura CSS y Responsive Designs">
+            </a>
          </div>
         <?php include( TEMPLATEPATH . '/templates/role__navigation--top.php' ); ?>
     </div>
-    <!-- El Claim -->
-    <div class="claims">
-        <header class="header" role="banner">
-            <h1 class="header__title">CoolVillage es la web de Daniel Martínez (<a href="https://twitter.com/Wakkos">@Wakkos</a>) <small>Frontend, profesor y tutor de arquitectura CSS y Responsive Design. </small></h1>
-            <p class="header__text">Trabajo junto a equipos en grandes proyectos enfocándome en escalabilidad, mantenibilidad y optimizacion del <strong>frontend</strong>. Normalmente me uno a ellos en los sprints iniciales para organizar la arquitectura y el flujo de trabajo para que, al acabar, el proyecto y su equipo sea auto suficiente.</p>
-        </header>
-        <div class="cta">
-            <a href="" class="btn--cta--curso">Próximo curso</a>
-            <a href="" class="btn--cta--hire">Contratar</a>
-        </div>
-    </div>
 </div>
-
-
-    <?php include( TEMPLATEPATH . '/templates/social-icons.php' ); ?>
 

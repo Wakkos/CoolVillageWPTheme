@@ -12,7 +12,8 @@
     	</p>
     </div>
 </footer>
-<?php wp_footer(); ?>
 
+<?php wp_footer(); ?>
+<script src="<?php bloginfo(template_url); ?>/js/min/prism-min.js"></script>
 </body>
 </html>
